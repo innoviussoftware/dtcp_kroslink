@@ -1,0 +1,72 @@
+.card {
+  margin: 0 auto;
+}
+
+.card .carousel-item {
+  height: 200px;
+}
+.card .carousel-caption {
+  padding: 0;
+  right: 0;
+  left: 0;
+  color: #3d3d3d;
+}
+.card .carousel-caption h3 {
+  color: #3d3d3d;
+}
+.card .carousel-caption p {
+  line-height: 30px;
+}
+.card .carousel-caption .col-sm-3 {
+  display: flex;
+  align-items: center;
+}
+.card .carousel-caption .col-sm-9 {
+  text-align: left;
+}
+.navi a {
+    font-size: 2em;
+    text-decoration:none;
+}
+.review
+{
+  font-size: 1.4em;
+  text-align: left;
+}
+.review .checked
+{
+  color:orange;
+}
+a > .ico {
+    /*background-color: grey;*/
+    padding: 10px;
+    color: black
+}
+a:hover > .ico {
+    /*background-color: #666;*/
+    color: black;
+}
+
+.agncy_about_more {float: right;margin-right: 2%;bottom: -45px;position: relative;}
+
+@media (max-width:767px){
+    
+    .moreBox
+    {
+      height: auto !important;
+    }
+
+    .agnecy_about_main
+    {
+      height: auto !important;
+    }
+
+    .agncy_about_more
+    {
+      bottom: 0px !important;
+    }
+    
+
+}
+
+

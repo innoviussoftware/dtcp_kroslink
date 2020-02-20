@@ -1,0 +1,470 @@
+@font-face {
+    font-family: rubik;
+    src: url('font/rubik/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: rubik-medium;
+    src: url('font/rubik/Rubik-Medium.ttf');
+}
+
+@font-face {
+    font-family: rubik-bold;
+    src: url('font/rubik/Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserrat-black;
+    src: url('font/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: Bunya-Light_PERSONAL;
+    src: url('font/fonts/Bunya-Light_PERSONAL.ttf');
+}
+
+body {
+    font-family: rubik;
+    color: #84898f;
+    font-weight: 300;
+}
+
+.caption-img {
+    background-image: url('../img/doodle.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 180px;
+    width: 299px;
+    padding-left: 4vh;
+    padding-top: 3vh;
+    text-align: center;
+    line-height: 2;
+}
+
+.caption-img .title-pack {
+    /* font-family: 'rubik' !important; */
+    font-size: 2em;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+}
+
+.caption-img p{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.caption-img .price {
+    font-size: 2.2em;
+    color: #ff5f00;
+}
+
+.inspire_me {
+    padding: 7px 0;
+    font-size: 14px !important;
+    background-color: transparent;
+    /*border: solid 1px #ff5f00;*/
+    width: 100%;
+    color: #fff;
+}
+
+.inspire-next {
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 5px 50px;
+    border-bottom: solid 3px #ff5f00;
+    text-transform: none !important;
+}
+
+/************************************************ start container-radio css**********************************************************/
+/* The container-radio */
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #000;
+}
+
+#top_scroll {
+    display: none;
+    position: fixed;
+    right: 18px;
+    top: 80%;
+    height: 40px;
+    width: 40px;
+    background-color: #ff5f00;
+    border-radius: 3em;
+    z-index: 1;
+}
+
+#top_scroll>i {
+    color: #fff;
+    text-align: center;
+    padding: 10px 13px;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked~.checkmark {
+    background-color: #ff5f00;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/************************************************End container-radio css**********************************************************/
+/************************************************ start container-checkbox css**********************************************************/
+/* The container */
+.container-checkbox {
+    color: #000;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark_check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input~.checkmark_check {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked~.checkmark_check {
+    background-color: #ff5f00;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked~.checkmark_check:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark_check:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/************************************************End container-checkbox css**********************************************************/
+.container-check-div {
+    border: solid 1px gray;
+    border-radius: 3em;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+
+.container-radio-div {
+    border: solid 1px gray;
+    border-radius: 3em;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+
+.customer-logos .slide {
+    height: 100px;
+}
+
+.customer-logos .slide img {
+    height: 100%;
+}
+
+/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.steps {
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    margin: 1px;
+}
+
+#floating_enquire_button {
+    position: fixed;
+    left: -30px;
+    width: auto;
+    top: 85%;
+    color: white;
+    border-radius: 0px;
+    font-size: 18px;
+    border: 0px;
+    transform: rotate(-90deg);
+    height: 30px;
+    z-index: 1;
+    padding-bottom: 32px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.pac-container.pac-logo {
+    z-index: 1050 !important;
+}
+
+.tripforbusiness {
+    background: #76b51b;
+    box-shadow: 0 0 10px black;
+    border-radius: 2em;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 5px 15px;
+}
+
+.callus i {
+    font-weight: bold;
+}
+
+.banner_input {
+    border-radius: 5px !important;
+    border: solid 1px #fff !important;
+}
+
+.banner_input input {
+    border: none !important;
+}
+
+.banner_input_icon {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.how_it_work {
+    background: rgb(242, 242, 242);
+    text-align: center;
+}
+
+.how_it_work img {
+    margin-bottom: 8%;
+    width: 120px;
+}
+
+.how_it_work label {
+    color: #F05F40;
+}
+
+.how_it_work label span {
+    color: black;
+}
+
+.how_it_work .box_body {
+    position: relative;
+    width: 33.33%;
+}
+
+.how_it_work .box_body i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 1.8em;
+    color: #F05F40;
+}
+
+@media screen and (max-width: 768px) {
+    .how_it_work .image_box {
+        display: block !important;
+    }
+
+    .how_it_work .box_body {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .how_it_work .box_body i {
+        display: none;
+    }
+    .caption-img{
+      display: none;
+    }
+}

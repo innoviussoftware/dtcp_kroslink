@@ -1,0 +1,60 @@
+.main-menu-area {
+    background: #035703;
+}
+.header-top {
+    background-color: #035703;
+}
+.latest-notice {
+    background-color: #035703;
+}
+.btn-primary {
+    background-color: #035703;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #035703;
+    border-color: #035703;
+}
+.quickform {
+    background-color: #035703;
+}
+.footer-bottom {
+    background: #035703;
+}
+.footer-middle {
+    background: #376037;
+}
+.theme-color{
+    color: #376037;
+}
+.carousel-title:after {
+    background: #376037;
+}
+.footerlogo img{
+    background-color: #035703;
+}
+.latest-gallery-area .carousel-title:after{
+    background: #035703;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #035703 none repeat scroll 0 0;
+}
+.news-notice-content .auther-content{
+    color : #fff;
+}
+.main-menu-area.sticky {
+    background-color: #035703;
+}
+.latest-gallery-area .gallery .single-gallery {
+    background-color: #035703;
+    padding: 2px;
+}
+.megamenu{
+    background-color: #035703;
+}
+.hamburgermenu .menu{
+    background-color: #035703;
+}
+.nav-tabs.gallery-category-list>li.active>a{
+    background-color: #035703;
+}

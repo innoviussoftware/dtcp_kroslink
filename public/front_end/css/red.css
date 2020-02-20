@@ -1,0 +1,60 @@
+.main-menu-area {
+    background: #eb402e;
+}
+.header-top {
+    background-color: #eb402e;
+}
+.latest-notice {
+    background-color: #eb402e;
+}
+.btn-primary {
+    background-color: #eb402e;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #eb402e;
+    border-color: #eb402e;
+}
+.quickform {
+    background-color: #eb402e;
+}
+.footer-bottom {
+    background: #eb402e;
+}
+.footer-middle {
+    background: #f36152;
+}
+.theme-color{
+    color: #eb402e;
+}
+.carousel-title:after {
+    background: #eb402e;
+}
+.footerlogo img{
+	background-color: #eb402e;
+}
+.latest-gallery-area .carousel-title:after{
+	background: #eb402e;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #eb402e none repeat scroll 0 0;
+}
+.news-notice-content .auther-content{
+	color : #fff;
+}
+.main-menu-area.sticky {
+    background-color: #eb402e;
+}
+.latest-gallery-area .gallery .single-gallery {
+    background-color: #eb402e;
+    padding: 2px;
+}
+.megamenu{
+    background-color: #eb402e;
+}
+.hamburgermenu .menu{
+    background-color: #eb402e;
+}
+.nav-tabs.gallery-category-list>li.active>a{
+    background-color: #eb402e;
+}
