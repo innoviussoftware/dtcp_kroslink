@@ -1,0 +1,80 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+            @page {
+                margin: 0cm 0cm;
+            }
+            body {
+                margin-top: 3cm;
+                margin-left: 2cm;
+                margin-right: 2cm;
+                margin-bottom: 2cm;
+            }
+            header {
+                position: fixed;
+                top: 0cm;
+                left: 0cm;
+                right: 0cm;
+                height: 3cm;
+            }
+            footer {
+                position: fixed; 
+                bottom: 0cm; 
+                left: 0cm; 
+                right: 0cm;
+                height: 5cm;
+            }
+            main{
+                position: fixed; 
+                top: 5cm; 
+                
+            }
+            #footer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .invoice table {
+            margin: 15px;
+            }
+            .invoice h3 {
+                margin-left: 15px;
+            }
+      </style>
+    </head>
+    <body>
+        
+        <table class="table table-bordered">
+            <tr>
+                <td>Name</td>
+                <td>{{$html['name']}}</td>
+            </tr>
+
+            <tr>
+                <td>email</td>
+                <td>{{$html['email']}}</td>
+            </tr>
+
+            <tr>
+                <td>Phone</td>
+                <td>{{$html['phone']}}</td>
+            </tr>
+
+            <tr>
+                <td>Subject</td>
+                <td>{{$html['subject']}}</td>
+            </tr>
+
+            <tr>
+                <td>Message</td>
+                <td>{{$html['message']}}</td>
+            </tr>
+          
+        </table>
+
+    </body>
+</html>

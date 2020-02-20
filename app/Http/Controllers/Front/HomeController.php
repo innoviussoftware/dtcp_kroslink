@@ -20,6 +20,8 @@ use App\Category;
 use Validator;
 use Session;
 use App\Visitors;
+use App\Mail\RequestForm;
+use Mail;
 
 class HomeController extends Controller
 {
@@ -410,6 +412,16 @@ $rp=$request->ip();
             $contactus->subject = request('subject');
             $contactus->message = request('message');
             $contactus->save();
+
+            $to_address='shahidpatel.innovius@gmail.com';
+            $data=array(
+                'name'=>request('name'),
+                'email'=>request('email'),
+                'phone'=>request('phone'),
+                'subject'=>request('subject'),
+                'message'=>request('message'),
+            );
+            Mail::to($to_address)->send(new RequestForm($data));
 
             return response()->json(['success'=>'Your request has been submitted.']);
         }

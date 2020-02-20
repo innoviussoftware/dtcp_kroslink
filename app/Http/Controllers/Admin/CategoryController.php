@@ -81,7 +81,7 @@ class CategoryController extends Controller
         	}
         	$Category->image = isset($path)?$path:'';
           	$Category->save();
-            LogsDetails::StoreLogs('gallery', $request->all());
+            // LogsDetails::StoreLogs('gallery', $request->all());
         }
 
         return redirect()->route('admin.category')->with('success','Category updated successfully.');

@@ -141,7 +141,7 @@ class SubMenuController extends Controller
             $Submenu->sorted = request('sort');
             $Submenu->page_id=request('page');
             $Submenu->save();
-            LogsDetails::StoreLogs('submenu', $request->all());
+            // LogsDetails::StoreLogs('submenu', $request->all());
             $page=Pages::where('id',request('page'))->update(['alias'=>strtolower(request('title'))]);
         }
 

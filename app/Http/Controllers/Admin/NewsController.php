@@ -69,7 +69,7 @@ class NewsController extends Controller
             $news->tamil_content = request('tamilcontent');
             $news->url = request('url');
           	$news->save();
-            LogsDetails::StoreLogs('news', $request->all());
+            // LogsDetails::StoreLogs('news', $request->all());
         }
 
         return redirect()->route('admin.news')->with('success','News updated successfully.');

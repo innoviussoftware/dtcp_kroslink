@@ -884,6 +884,10 @@ ul.gallery-category-list li{
     display: none !important;
 }
 
+#quickform .form-group .error{
+    display: inline-block !important;
+}
+
 
 
 

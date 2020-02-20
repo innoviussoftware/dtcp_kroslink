@@ -132,7 +132,7 @@ class GalleryController extends Controller
             }
         	$Gallery->image = isset($path)?$path:'';
           	$Gallery->save();
-            LogsDetails::StoreLogs('gallery', $request->all());
+            // LogsDetails::StoreLogs('gallery', $request->all());
         }
 
         return redirect()->route('admin.gallery')->with('success','Gallery updated successfully.');

@@ -139,7 +139,7 @@
 
                                             <div class="row">
 
-                                                <form method="post" action="#" name="quickform" id="quickform">
+                                                <form method="post" action="#" name="quickform" id="quickform" class="quickform">
 
                                                     {{ csrf_field() }}
 

@@ -82,7 +82,7 @@ class PartnersController extends Controller
         	$Gallery->image = isset($path)?$path:'';
             $Gallery->url = request('url');
           	$Gallery->save();
-            LogsDetails::StoreLogs('partners-logo', $request->all());
+            // LogsDetails::StoreLogs('partners-logo', $request->all());
         }
 
         return redirect()->route('admin.partners')->with('success','Partnerslogo updated successfully.');

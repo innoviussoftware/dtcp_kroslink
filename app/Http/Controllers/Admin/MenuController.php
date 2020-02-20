@@ -130,7 +130,7 @@ class MenuController extends Controller
             $menu->url = $page->url;
             $menu->tamilname = request('tamilname');
             $menu->save();
-            LogsDetails::StoreLogs('menu', $request->all());
+            // LogsDetails::StoreLogs('menu', $request->all());
             $page=Pages::where('id',$menu->page_id)->update(['alias'=>strtolower(request('name'))]);
         }
 
