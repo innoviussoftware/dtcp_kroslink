@@ -75,11 +75,11 @@
 
                                     <ul class="list-inline">
 
-                                        <li class="list-inline-item" class="white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item" class="red" data-path="{{asset('public/front_end/css/red.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item red" data-path="{{asset('public/front_end/css/red.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item" class="green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
                                     </ul>
 
@@ -131,17 +131,7 @@
             <ul>
 
                 @foreach($data['menulist'] as $menu)
-                <!-- <li><a href="{{route('homeindex',$menu['name'])}}" class="active">{{$menu['name']}}</a>
-                        @if(isset($menu['is_submenu'])==1)
-                        <ul>
-                            @foreach($menu['submenu'] as $menus)
-                            <li>
-                                <a href="{{route('homeindex',$menus['name'])}}">{{$menus['name']}}</a>
-                            </li>
-                            @endforeach
-                        </ul>
-                        @endif
-                </li> -->
+                
                 <li>
                                             @if(isset($menu['is_submenu'])==1)
 
@@ -184,7 +174,7 @@
                                                 <?php }?>  
 
                                             @endif
-                                        </li>
+                </li>
                 @endforeach
 
 
