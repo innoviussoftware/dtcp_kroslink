@@ -330,7 +330,7 @@ $rp=$request->ip();
                                     "primary_images"=>isset($value->category->image)?$value->category->image:''
                                   ];
                             }
-                              $galleryres[]=['images'=>$value->image];
+                              $galleryres[]=['images'=>$value->image,'description'=>$value->description];
         }
 
         $GalleryImages = GalleryImages::where('gallery_id',$id)->get();
@@ -421,9 +421,23 @@ $rp=$request->ip();
                 'subject'=>request('subject'),
                 'message'=>request('message'),
             );
-            Mail::to($to_address)->send(new RequestForm($data));
+           // Mail::to($to_address)->send(new RequestForm($data));
 
-            return response()->json(['success'=>'Your request has been submitted.']);
+            Mail::send('mail-template', ['user' => $data], function ($m) use($data) {
+
+                 $m->from(env('SUPPORT_EMAIL'), 'DTCP | You have new inquiry');
+                 $m->to('shahidpatel.innovius@gmail.com')->cc('harshal@innoviussoftware.com')->subject('DTCP | You have new inquiry');
+            });
+            if (Mail::failures()) {
+           // return response()->json(['success'=>'Your request has been canc.']);
+            }
+            else
+            {
+               return response()->json(['success'=>'Your request has been submitted.']);
+
+            }
+
+           
         }
 
         return response()->json(['error'=>$validator->errors()->all()]);

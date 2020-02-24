@@ -799,7 +799,9 @@ ul.gallery-category-list li{
 
 
 /*//common page content  section cms*/
-
+.pages_container{
+    padding-bottom: 3em !important;
+}
 .pages_container p{
 
     color: #000;

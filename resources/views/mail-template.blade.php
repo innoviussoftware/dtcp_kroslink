@@ -47,34 +47,37 @@
       </style>
     </head>
     <body>
-        
+        <p>Hello Sir,</p>
+        <p>You have receive following inquiry from DTCP Portal.</p>
         <table class="table table-bordered">
             <tr>
-                <td>Name</td>
-                <td>{{$html['name']}}</td>
+                <td>Name: </td>
+                <td>{{ucfirst($user['name'])}}</td>
             </tr>
 
             <tr>
-                <td>email</td>
-                <td>{{$html['email']}}</td>
+                <td>email: </td>
+                <td>{{ucfirst($user['email'])}}</td>
             </tr>
 
             <tr>
-                <td>Phone</td>
-                <td>{{$html['phone']}}</td>
+                <td>Phone: </td>
+                <td>{{ucfirst($user['phone'])}}</td>
             </tr>
 
             <tr>
-                <td>Subject</td>
-                <td>{{$html['subject']}}</td>
+                <td>Subject: </td>
+                <td>{{ucfirst($user['subject'])}}</td>
             </tr>
 
             <tr>
-                <td>Message</td>
-                <td>{{$html['message']}}</td>
+                <td>Message: </td>
+                <td>{{ucfirst($user['message'])}}</td>
             </tr>
           
         </table>
+        <p>Thanks,</p>
+        <p>DTCP Team</p>
 
     </body>
 </html>

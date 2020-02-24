@@ -51,6 +51,7 @@
           <h3 class="box-title">Edit Gallery</h3>
 
         </div>
+        <input type="hidden" name="gallery" value="{{$Gallery->image}}">
 
         <!-- /.box-header -->
 
@@ -88,11 +89,12 @@
                 
                 <img src="{{env('APP_URL_STORAGE').$Gallery->image}}" width="200" height="150" class="img-fluid">
 
-                @foreach($GalleryImages as $gallery)
-
-                <img src="{{env('APP_URL_STORAGE').$gallery->images}}" width="200" height="150" class="img-fluid">
-
-                @endforeach
+                
+                    @foreach($GalleryImages as $gallery)
+                      <img src="{{env('APP_URL_STORAGE').$gallery->images}}" width="200" height="150" class="img-fluid">
+                    @endforeach
+                
+               
 
           </div>
 

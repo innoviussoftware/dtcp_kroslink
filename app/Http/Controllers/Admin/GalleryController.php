@@ -101,36 +101,57 @@ class GalleryController extends Controller
     	if($Gallery)
     	{
             $images=$request->file('image');
-            if(count($images) > 8)
+              
+            if(isset($images))
             {
-               
-                return back()->with('success','Sorry! you can not add more then 8 image');
+
+                if(count($images) > 8)
+                {
+                   
+                    return back()->with('success','Sorry! you can not add more then 8 image');
+                }
+                else
+                {
+
+                    if(isset($images))
+                    {       
+
+                            GalleryImages::where('gallery_id',$id)->delete();
+
+                            foreach ($images as $key=>$value) {
+                                
+                                $image = $value;
+                                $path = $image->store('gallery_images');
+                                
+                                if($key==0)
+                                {
+                                    Gallery::where('id',$id)->update(['image'=>$path]);
+                                }
+                                else
+                                {
+
+                                    $GalleryImages = new GalleryImages;
+                                    $GalleryImages->gallery_id =$id;
+                                    $GalleryImages->images =$path;
+                                    $GalleryImages->save();
+                                }
+                            }
+                    }
+                    else
+                    {
+                        
+                        $hiddenpath=request('gallery');
+                    }
+                }
             }
             else
             {
-                if(isset($images))
-                {       
-                        GalleryImages::where('gallery_id',$id)->delete();
-                        foreach ($images as $key=>$value) {
-                            
-                            $image = $value;
-                            $path = $image->store('gallery_images');
-                            if($key==0)
-                            {
-                                Gallery::where('id',$id)->update(['image'=>$path]);
-                            }
-                            else
-                            {
-                                $GalleryImages = new GalleryImages;
-                                $GalleryImages->gallery_id =$id;
-                                $GalleryImages->images =$path;
-                                $GalleryImages->save();
-                            }
-                            
-                        }
-                }
+                $hiddenpath=request('gallery');
             }
-        	$Gallery->image = isset($path)?$path:'';
+
+           
+        	$Gallery->image = isset($path)?$path:$hiddenpath;
+            $Gallery->description=request('description');
           	$Gallery->save();
             // LogsDetails::StoreLogs('gallery', $request->all());
         }
@@ -175,12 +196,14 @@ class GalleryController extends Controller
                 $gallery_images=Gallery::where('id',$id)->first();
                 
                 $image=[];
-
+                $image[]='<img src="'.env('APP_URL_STORAGE').''.$gallery_images->image.'" width="100" height="50">';
                 foreach ($slider as  $value) {
                     $image[] = '<img src="'.env('APP_URL_STORAGE').''.$value->images.'" width="100" height="50">';   
                 }
                 
-                $image[] = '<img src="'.env('APP_URL_STORAGE').''.$gallery_images->image.'" width="100" height="50">';
+                // $newimage= '<img src="'.env('APP_URL_STORAGE').''.$gallery_images->image.'" width="100" height="50">';
+                // // dd($image);
+                // array_push($image,$newimage);
                 
                 $sub[] = $image;
 

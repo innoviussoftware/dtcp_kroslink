@@ -34,7 +34,7 @@
 
 
 
-    <div class="col-md-6 col-xs-6">
+    <div class="col-md-8 col-xs-8">
 
       <div class="box">
 
