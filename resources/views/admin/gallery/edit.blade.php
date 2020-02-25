@@ -91,7 +91,11 @@
 
                 
                     @foreach($GalleryImages as $gallery)
-                      <img src="{{env('APP_URL_STORAGE').$gallery->images}}" width="200" height="150" class="img-fluid">
+                      <?php if($Gallery->image==$gallery->images){?>
+                      <?php }else{?>
+                      <img src="{{env('APP_URL_STORAGE').$gallery->images}}" width="200" height="150" class="img-fluid">  
+                      <?php }?>
+                      
                     @endforeach
                 
                

@@ -996,8 +996,8 @@ if(isset($wpnew))
 
                     <div class="gallery">
 
-                         @foreach($Gallery as $key => $gal)
-
+                        @foreach($Gallery as $key => $gal)
+                        <!--  -->
                         <div class="single-gallery">
 
                             <a href="{{route('gallerydetail',isset($gal->category->id)?$gal->category->id:'')}}"  data-title="My caption"><img src="{{env('APP_URL_STORAGE').$gal->image}}" alt="gallery {{ $key }}" width="243px" height="243px"></a>

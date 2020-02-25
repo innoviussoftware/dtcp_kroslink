@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
      
         $data = $request->session()->all();
-$rp=$request->ip();
+        $rp=$request->ip();
 
         $visit=new Visitors;
         $visit->ip=$rp;
@@ -62,8 +62,9 @@ $rp=$request->ip();
                         }
                         $Clientlogo=Clientlogo::where('activate',1)->get();
                         $Gallery=Gallery::where('activate',1)->whereHas('category',function($q){
-            $q->where('activate','1');
-        })->groupBy('category_id')->get();
+                                    $q->where('activate','1');
+                        })->orderBy('id','desc')->groupBy('category_id')->get();
+                        
                         $galleryres=[];
                         foreach ($Gallery as  $value) {
                             
@@ -140,9 +141,10 @@ $rp=$request->ip();
                         }
                         $Clientlogo=Clientlogo::where('activate',1)->get();
                         $Gallery=Gallery::where('activate',1)->whereHas('category',function($q){
-            $q->where('activate','1');
-        })->groupBy('category_id')->get();
+                                $q->where('activate','1');
+                        })->orderBy('id','desc')->groupBy('category_id')->get();
                         $galleryres=[];
+                        
                         foreach ($Gallery as  $value) {
                             
                             $GalleryImages = GalleryImages::where('gallery_id',$value->id)->get();
@@ -220,8 +222,9 @@ $rp=$request->ip();
                 }
                 $Clientlogo=Clientlogo::where('activate',1)->get();
                 $Gallery=Gallery::where('activate',1)->whereHas('category',function($q){
-            $q->where('activate','1');
-        })->groupBy('category_id')->get();
+                            $q->where('activate','1');
+
+                        })->orderBy('id','desc')->groupBy('category_id')->get();
 
                 $galleryres=[];
                         foreach ($Gallery as  $value) {
@@ -295,7 +298,7 @@ $rp=$request->ip();
         $galleryres=[];
         foreach ($Gallery as  $value) {
                             
-                            $GalleryImages = GalleryImages::where('gallery_id',$value->id)->get();
+                        $GalleryImages = GalleryImages::where('gallery_id',$value->id)->get();
                             foreach ($GalleryImages as $values) {
                                     $galleryres[] = [
                                     "id" => $values->gallery_id,

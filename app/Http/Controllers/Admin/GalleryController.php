@@ -116,6 +116,7 @@ class GalleryController extends Controller
                     if(isset($images))
                     {       
 
+
                             GalleryImages::where('gallery_id',$id)->delete();
 
                             foreach ($images as $key=>$value) {
@@ -126,6 +127,10 @@ class GalleryController extends Controller
                                 if($key==0)
                                 {
                                     Gallery::where('id',$id)->update(['image'=>$path]);
+                                    $GalleryImages = new GalleryImages;
+                                    $GalleryImages->gallery_id =$id;
+                                    $GalleryImages->images =$path;
+                                    $GalleryImages->save();
                                 }
                                 else
                                 {
@@ -196,7 +201,7 @@ class GalleryController extends Controller
                 $gallery_images=Gallery::where('id',$id)->first();
                 
                 $image=[];
-                $image[]='<img src="'.env('APP_URL_STORAGE').''.$gallery_images->image.'" width="100" height="50">';
+                //$image[]='<img src="'.env('APP_URL_STORAGE').''.$gallery_images->image.'" width="100" height="50">';
                 foreach ($slider as  $value) {
                     $image[] = '<img src="'.env('APP_URL_STORAGE').''.$value->images.'" width="100" height="50">';   
                 }
