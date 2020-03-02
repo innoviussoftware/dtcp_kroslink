@@ -83,7 +83,9 @@
            <div class="form-group">
 
                 <label for="exampleInputEmail1">Banner Image</label>
-
+                <span>
+                  : Maxium upload file size 2 MB
+                </span>
                 <input type="file" name="bannerimage" class="form-control">
 
           </div>

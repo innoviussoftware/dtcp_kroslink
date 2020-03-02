@@ -120,25 +120,16 @@
 </style>
 <!-- <div class="latest-infobox-area section-p-30"> -->
         <div class="container">
-        	<!-- <div class="breadcrumb-area">
-			        <div class="container">
-			            <div class="row">
-			                <div class="col-md-12">
-			                    <div class="breadcrumb">
-			                        <ul class="newbreadcrumb">
-			                            <li class="completed"><a href="{{route('homeindex','home')}}" class="home-icon"><i class="fa fa-home"></i></a></li>
-			                            @foreach($breadcumb as $bd)
-			                            	<li class="breadcrumb-item active actpage" aria-current="page">{{ucfirst($bd)}}</li>
-			                            @endforeach
-			                            	
-			                        </ul>
-
-
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-    		</div> -->
+        	<div class="row">
+	            <div class="inner-banner-image">
+	                <?php 
+	                        if(isset($pages->bannerimage)){?>
+	                            <img src="{{ env('APP_URL_STORAGE').$pages->bannerimage}}"/>
+	                        <?php }else{?>
+	                        <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
+	                    <?php }?>
+	            </div>
+        	</div>
     		<div class="contaner-breadcrumb" style="background: url(assets/img/breadcrumbSlider.jpg);">
 
 
@@ -164,13 +155,37 @@
     </div>
         	<div class="pages_container">        		
 	            <div class="row">
-	                <div class="col-md-12">
+	                <div class="col-md-9">
 	                        <?php 
 	                        	if(isset($pages)){
 	                        		echo html_entity_decode(isset($pages->tamil_content)?$pages->tamil_content:$pages->page_content);
 	                        	}
 	                        ?>
 	                </div>
+	                <div class="col-md-3">
+                    <div class="right-sidebar">
+                    <h3 class="sidebar-whatnew">What's New</h3>
+                    <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                    <ul>
+                        @foreach($wpnew as $wps)
+
+                                    <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
+
+                        @endforeach
+                       <!--  <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Power delegation to subordinate office regarding Layout Approval</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Grand of Planning Permission-Power delegation to Local Bodies</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/kodaikanal_masterplan.htm" target="_blank">Kodaikanal Modified Master Plan</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/circular_GO_21_050219.pdf" target="_blank">Circular based on the G.O No. 21 Dt. 05th February 2019</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/gos/maws_e_18_2019.pdf" target="_blank">Tamil Nadu Combined Development and Building Rules, 2019</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/gos/hud_e_21_2019.pdf" target="_blank">G.O.Ms.No. 21, Dt. 5.2.2019 of Housing and Urban Development Department</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/acts_rules/pd_e_44_1990.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
+                        <li><a href="http://tnbuildingreg.in/" target="_blank">Building Regularization Scheme-2017</a></li> -->
+                    </ul>
+                    </marquee>
+                    </div>
+                </div>
 	            </div>
         	</div>
         </div>

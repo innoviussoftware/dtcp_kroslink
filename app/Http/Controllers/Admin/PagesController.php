@@ -44,7 +44,7 @@ class PagesController extends Controller
     public function storepages(Request $request)
     {
         $this->validate($request, [
-             'bannerimage' => 'dimensions:min_width=1200'
+             'bannerimage' => 'mimes:jpeg,bmp,png,jpg|max:2048'
             ],
             [
              'bannerimage.dimensions'=>'Image size must be width 1200'
@@ -106,7 +106,7 @@ class PagesController extends Controller
     public function updatepages(Request $request,$id)
     {
         $this->validate($request, [
-             'bannerimage' => 'dimensions:min_width=1200'
+             'bannerimage' => 'mimes:jpeg,bmp,png,jpg|max:2048'
             ],
             [
              'bannerimage.dimensions'=>'Image size must be width 1200'
