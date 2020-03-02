@@ -482,9 +482,9 @@
         margin: 10,
         dots: false,
         nav: true,
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:1000,
-        autoplayHoverPause:true,
+        autoplayHoverPause:false,
         navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
         responsive: {
             0: {

@@ -44,6 +44,7 @@
                                             <a href="#lan-list" data-toggle="collapse" ><span>English</span></a>
                                             @else
                                               <a href="#" class="language-select" data-lang="en"><span>English</span></a>
+
                                             @endif
 
                                      </div>
@@ -54,7 +55,6 @@
                                             
                                         </li>
 
-                                        
                                     </ul>
 
                                 </li>
@@ -509,6 +509,7 @@
             var limit = parseInt(regularfont) + 2;
             // $("h3").css("font-size",'25px'); 
             var iid = $(this).attr('id');
+            $('.decreasefont').attr('id',14);
 
             if(iid <= limit){
 
@@ -552,9 +553,11 @@
         }
 
         if(path == 'fontdecrease'){
+            // alert("Ad");
             var regularfont = $('.regularfont').attr('id');
             var limit = parseInt(regularfont) - 2;
             var iid = $(this).attr('id');
+            $('.increasefont').attr('id',16);
             // $("h3").css("font-size",'20px'); 
             if(iid >= limit){
                 var decr = parseInt(iid) - 1;

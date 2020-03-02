@@ -112,6 +112,14 @@
 .breadcrumb.flat a.classid_1:after{
     background: #0F79A0;
 }
+.left-sidebar{
+    border-right: 5px solid #0f7a9e;
+    padding-right: 15px;
+    height: 100%;
+}
+.right-sidebar marquee ul li{
+    margin-bottom: 5px;
+}
 /*.flat a:hover, .flat a.active, 
 .flat a:hover:after, .flat a.active:after{
     background: #9EEB62;
@@ -119,11 +127,13 @@
 
 </style>
 <!-- <div class="latest-infobox-area section-p-30"> -->
-        <div class="container">
-        	<div class="contaner-breadcrumb" style="background: url(assets/img/breadcrumbSlider.jpg);">
-
-
-
+    <div class="container">
+        <div class="row">
+            <div class="inner-banner-image">
+                <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
+            </div>
+        </div>
+        <div class="contaner-breadcrumb" style="background: url(assets/img/breadcrumbSlider.jpg);">
             <div class="row">
                 <div class="breadcrumb flat">
                     <a class="home" href="{{ url('/') }}"><i class="fa fa-home"></i></a>
@@ -138,22 +148,41 @@
                     @endforeach
                 </div>
             </div>
-
         <!-- Page Header End -->
         <!-- Start Content -->
-
-    </div>
-        	<div class="pages_container">        		
-	            <div class="row">
-	                <div class="col-md-12">
-	                        <?php 
-	                        	if(isset($pages)){
-	                        		echo html_entity_decode($pages->page_content);
-	                        	}
-	                        ?>
-	                </div>
-	            </div>
-        	</div>
         </div>
+        <div class="pages_container">        		
+	        <div class="row">
+	            <div class="col-md-9">
+                    <div class="left-sidebar">
+                    <?php 
+                    	if(isset($pages)){
+                    		echo html_entity_decode($pages->page_content);
+                    	}
+                    ?>
+                    </div>
+	            </div>
+                <div class="col-md-3">
+                    <div class="right-sidebar">
+                    <h3 class="sidebar-whatnew">What's New</h3>
+                    <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                    <ul>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1966</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Power delegation to subordinate office regarding Layout Approval</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Grand of Planning Permission-Power delegation to Local Bodies</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/kodaikanal_masterplan.htm" target="_blank">Kodaikanal Modified Master Plan</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/circulars/circular_GO_21_050219.pdf" target="_blank">Circular based on the G.O No. 21 Dt. 05th February 2019</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/gos/maws_e_18_2019.pdf" target="_blank">Tamil Nadu Combined Development and Building Rules, 2019</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/gos/hud_e_21_2019.pdf" target="_blank">G.O.Ms.No. 21, Dt. 5.2.2019 of Housing and Urban Development Department</a></li>
+                        <li><a href="https://www.tn.gov.in/tcp/acts_rules/pd_e_44_1990.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
+                        <li><a href="http://tnbuildingreg.in/" target="_blank">Building Regularization Scheme-2017</a></li>
+                    </ul>
+                    </marquee>
+                    </div>
+                </div>
+	        </div>
+        </div>
+    </div>
    <!--  </div> -->
 @endsection
