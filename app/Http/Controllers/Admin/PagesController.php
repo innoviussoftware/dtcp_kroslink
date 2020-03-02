@@ -43,6 +43,14 @@ class PagesController extends Controller
 
     public function storepages(Request $request)
     {
+        $this->validate($request, [
+             'bannerimage' => 'dimensions:min_width=1200'
+            ],
+            [
+             'bannerimage.dimensions'=>'Image size must be width 1200'
+            ]
+        );
+
         $title=$this->seo_friendly_url(request('title'));        
         $url=env('APP_URL').'/'.strtolower($title);
         $url_find=Pages::where('url',$url)->first();
@@ -54,11 +62,17 @@ class PagesController extends Controller
         {
             $newurl=$url;
         }
+
+         if ($request->file('bannerimage')) {
+            $image = $request->bannerimage;
+            $path = $image->store('bannerimage');
+        }
         $Pages = new Pages;
         $Pages->title = request('title');
-        // $Pages->menu_id = $menu_id;
+        $Pages->bannerimage =isset($path)?$path:'';
         $Pages->url = $newurl;
         $Pages->alias = strtolower($title);
+        $Pages->page_content = request('content');
         $Pages->page_content = request('content');
         $Pages->meta_target = request('metatarget');
         $Pages->meta_keyword = request('metakeyword');
@@ -91,6 +105,14 @@ class PagesController extends Controller
 
     public function updatepages(Request $request,$id)
     {
+        $this->validate($request, [
+             'bannerimage' => 'dimensions:min_width=1200'
+            ],
+            [
+             'bannerimage.dimensions'=>'Image size must be width 1200'
+            ]
+        );
+
         $Pages=Pages::find($id);
         if($Pages)
         {
@@ -116,9 +138,18 @@ class PagesController extends Controller
                 }
                 $Pages->url = $newurl;
             }
+
+            if ($request->file('bannerimage')) {
+                $image = $request->bannerimage;
+                $path = $image->store('bannerimage');
+            }
+            else
+            {
+                $path = $request->bannerimagepath;
+            }
             $Pages->title = request('title');
             $Pages->alias = strtolower($title);
-            
+            $Pages->bannerimage =isset($path)?$path:'';
             $Pages->page_content = request('content') ;
             $Pages->meta_target = request('metatarget');
             $Pages->meta_keyword = request('metakeyword');
@@ -164,7 +195,8 @@ class PagesController extends Controller
 
                 $sub[] = $n->meta_details;
 
-                $sub[] = isset($n->external_url)?substr($n->external_url,0,10):'-';
+                $sub[]='<a class="btn btn-secondary" data-toggle="'.$n->url.'"  data-placement="top" title="'.$n->url.'">'.substr($n->url,0,15).'
+                    </a>';
 
                 $encryptid = Crypt::encryptString($id);
 

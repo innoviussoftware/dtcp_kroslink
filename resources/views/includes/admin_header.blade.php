@@ -83,7 +83,7 @@
 
                 @if($roles)
 
-                  <small>{{ ucfirst($roles->name) }}</small>
+                  <small>{{ ucfirst($roles->display_name) }}</small>
 
                 @endif
 

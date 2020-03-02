@@ -10,7 +10,7 @@ class Pages extends Model
    	protected $table = 'pages';
     
   	protected $fillable = [
-        'title','menu_id','url','alias','page_content','meta_target','meta_keyword','meta_details','tamil_title','tamil_content'
+        'title','menu_id','url','alias','page_content','meta_target','meta_keyword','meta_details','tamil_title','tamil_content','bannerimage'
    	];
 
    	public function menu()

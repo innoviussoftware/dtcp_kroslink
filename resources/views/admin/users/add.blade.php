@@ -46,7 +46,7 @@
                 <select class="form-control" required="" name="roles">
                   <option value="">Select Role</option>
                   @foreach($role as $r)
-                  <option value="{{$r->id}}">{{$r->name}}</option>
+                  <option value="{{$r->id}}">{{$r->display_name}}</option>
                   @endforeach
                 </select>
           </div>

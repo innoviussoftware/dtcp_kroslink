@@ -70,9 +70,9 @@
 
               <th>Meta Keyword</th>
 
-              <!-- <th>URL</th> -->
+              <th>URL</th>
 
-              <th>External URL</th>
+              <!-- <th>External URL</th> -->
 
               <th>Status</th>
 

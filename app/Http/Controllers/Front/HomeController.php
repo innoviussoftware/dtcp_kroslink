@@ -92,6 +92,7 @@ class HomeController extends Controller
                         $breadcumb=array();
                         $menu=Menu::where('page_id',$pages->id)->first();
                         $submenu=Submenu::where('page_id',$pages->id)->first();
+                        $wpnew=Whatsnew::all();
                         if($menu)
                         {
                             $breadcumb[]=$menu->name;
@@ -106,7 +107,7 @@ class HomeController extends Controller
                                 $breadcumb[]=$submenu->name;    
                             }
                         }
-                        return view('front.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb]); 
+                        return view('front.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb,'wpnew'=>$wpnew]); 
                     }
                 }
                 else
@@ -171,6 +172,7 @@ class HomeController extends Controller
                         $breadcumb=array();
                         $menu=Menu::where('page_id',$pages->id)->first();
                         $submenu=Submenu::where('page_id',$pages->id)->first();
+                        $wpnew=Whatsnew::all();
                         if($menu)
                         {
                             $breadcumb[]=isset($menu->tamilname)?$menu->tamilname:$menu->name;
@@ -188,7 +190,7 @@ class HomeController extends Controller
 
                             }
                         }
-                        return view('front.tamil.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb]); 
+                        return view('front.tamil.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb,'wpnew'=>$wpnew]); 
                     }
                 }
                 else
@@ -255,6 +257,7 @@ class HomeController extends Controller
                 $breadcumb=array();
                 $menu=Menu::where('page_id',$pages->id)->first();
                 $submenu=Submenu::where('page_id',$pages->id)->first();
+                $wpnew=Whatsnew::all();
                 if($menu)
                 {
                     $breadcumb[]=$menu->name;
@@ -269,7 +272,7 @@ class HomeController extends Controller
                         $breadcumb[]=$submenu->name;    
                     }
                 }
-                return view('front.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb]); 
+                return view('front.pages',['pages'=> $pages,'data'=>$data,'menu'=>$menu,'submenu'=>$submenu,'breadcumb'=>$breadcumb,'wpnew'=>$wpnew]); 
             }
         }
         else
@@ -345,7 +348,7 @@ class HomeController extends Controller
     public function homepage()
     {
                 $Menu = Menu::with('pages')->orderBy('menus.sorted','ASC')->get()->toArray();
-		$Visitors=Visitors::count();
+        $Visitors=Visitors::count();
                 $menulist = array();
                 $value['submenu'] = array();
                 $value['is_submenu'] = 0;
@@ -384,7 +387,7 @@ class HomeController extends Controller
                         'tamil_details'=>isset($Settings->tamil_details)? $Settings->tamil_details:'',
                         'footerdetails'=>isset($Settings->footer_details)? $Settings->footer_details:'',
                         'footertamil_details'=>isset($Settings->footer_tamildetails)? $Settings->footer_tamildetails:'',
-			'Visitors'=>isset($Visitors)?$Visitors:'',
+            'Visitors'=>isset($Visitors)?$Visitors:'',
                 ];
                 return $data;
     }

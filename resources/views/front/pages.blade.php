@@ -130,7 +130,12 @@
     <div class="container">
         <div class="row">
             <div class="inner-banner-image">
-                <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
+                <?php 
+                        if(isset($pages->bannerimage)){?>
+                            <img src="{{ env('APP_URL_STORAGE').$pages->bannerimage}}"/>
+                        <?php }else{?>
+                        <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
+                    <?php }?>
             </div>
         </div>
         <div class="contaner-breadcrumb" style="background: url(assets/img/breadcrumbSlider.jpg);">
@@ -167,7 +172,12 @@
                     <h3 class="sidebar-whatnew">What's New</h3>
                     <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();">
                     <ul>
-                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1966</a></li>
+                        @foreach($wpnew as $wps)
+
+                                    <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
+
+                        @endforeach
+                       <!--  <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
                         <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
                         <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Power delegation to subordinate office regarding Layout Approval</a></li>
                         <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Grand of Planning Permission-Power delegation to Local Bodies</a></li>
@@ -176,7 +186,7 @@
                         <li><a href="https://www.tn.gov.in/tcp/gos/maws_e_18_2019.pdf" target="_blank">Tamil Nadu Combined Development and Building Rules, 2019</a></li>
                         <li><a href="https://www.tn.gov.in/tcp/gos/hud_e_21_2019.pdf" target="_blank">G.O.Ms.No. 21, Dt. 5.2.2019 of Housing and Urban Development Department</a></li>
                         <li><a href="https://www.tn.gov.in/tcp/acts_rules/pd_e_44_1990.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
-                        <li><a href="http://tnbuildingreg.in/" target="_blank">Building Regularization Scheme-2017</a></li>
+                        <li><a href="http://tnbuildingreg.in/" target="_blank">Building Regularization Scheme-2017</a></li> -->
                     </ul>
                     </marquee>
                     </div>

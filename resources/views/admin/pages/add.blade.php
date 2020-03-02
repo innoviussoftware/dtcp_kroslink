@@ -36,7 +36,7 @@
 
       <div class="box">
 
-        <form action="{{route('admin.pages.storepages')}}" method="post">
+        <form action="{{route('admin.pages.storepages')}}" method="post" enctype="multipart/form-data">
 
         @csrf
 
@@ -74,16 +74,19 @@
 
           <div class="form-group">
 
-                <label for="exampleInputEmail1">External URL</label>
+                <label for="exampleInputEmail1">URL</label>
 
-                <input type="url" value="{{old('url')}}" name="externalurl" class="form-control" placeholder="Enter External url">
+                <input type="url" value="{{old('url')}}" name="externalurl" class="form-control" placeholder="Enter URL">
 
           </div>
 
+           <div class="form-group">
 
+                <label for="exampleInputEmail1">Banner Image</label>
 
-          
+                <input type="file" name="bannerimage" class="form-control">
 
+          </div>
 
 
           <div class="form-group">
@@ -93,7 +96,6 @@
                 <input type="text" value="{{ old('metatarget') }}" name="metatarget" class="form-control" placeholder="Enter meta target" >
 
           </div>
-
 
 
           <div class="form-group">
@@ -118,17 +120,17 @@
 
           <div class="form-group">
 
-            <label for="exampleInputEmail1">Content</label>
+                <label for="exampleInputEmail1">Content</label>
 
-            <textarea name="content"rows="5" cols="40" id="content" class="form-control tinymce-txt" placeholder=""></textarea>
+                <textarea name="content"rows="5" cols="40" id="content" class="form-control tinymce-txt" placeholder=""></textarea>
 
           </div>
 
           <div class="form-group">
 
-            <label for="exampleInputEmail1">Tamil Content</label>
+                <label for="exampleInputEmail1">Tamil Content</label>
 
-            <textarea name="tamilcontent" rows="5" cols="40" id="tamilcontent" class="form-control tinymce-txt" placeholder=""></textarea>
+                <textarea name="tamilcontent" rows="5" cols="40" id="tamilcontent" class="form-control tinymce-txt" placeholder=""></textarea>
 
           </div>
 

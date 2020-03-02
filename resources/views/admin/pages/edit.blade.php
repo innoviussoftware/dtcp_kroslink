@@ -36,8 +36,8 @@
 
       <div class="box">
 
-        <form action="{{route('admin.pages.update',$Pages->id)}}" method="post">
-
+        <form action="{{route('admin.pages.update',$Pages->id)}}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="bannerimagepath" value="{{$Pages->bannerimage}}">
         @csrf
 
        @method('PATCH')
@@ -72,17 +72,25 @@
 
           <div class="form-group">
 
-                <label for="exampleInputEmail1">External URL</label>
+                <label for="exampleInputEmail1">URL</label>
 
-                <input type="url" value="{{$Pages->external_url }}" name="externalurl" class="form-control" placeholder="Enter External url">
+                <input type="url" value="{{$Pages->external_url }}" name="externalurl" class="form-control" placeholder="Enter URL">
 
           </div>
- 
 
+          <div class="form-group">
 
-          
+                <label for="exampleInputEmail1">Banner Image</label>
 
+                <input type="file" name="bannerimage" class="form-control">
 
+          </div>
+
+          <div class="form-group">
+
+                <img src="{{env('APP_URL_STORAGE').$Pages->bannerimage}}" width="200" height="150" class="img-fluid">
+
+          </div>
 
           <div class="form-group">
 
@@ -92,8 +100,6 @@
 
           </div>
 
-
-
           <div class="form-group">
 
                 <label for="exampleInputEmail1">Meta Details</label>
@@ -102,8 +108,6 @@
 
           </div>
 
-
-
           <div class="form-group">
 
                 <label for="exampleInputEmail1">Meta Keyword</label>
@@ -111,8 +115,6 @@
                 <input type="text" value="{{$Pages->meta_keyword }}" name="metakeyword" class="form-control" placeholder="Enter meta keyword">
 
           </div>
-
-
 
           <div class="form-group">
 
@@ -129,8 +131,6 @@
             <textarea name="tamilcontent"rows="5" cols="40" id="tamilcontentname" class="form-control tinymce-txt" placeholder="">{{$Pages->tamil_content }}</textarea>
 
           </div>
-
-
 
         </div>
 

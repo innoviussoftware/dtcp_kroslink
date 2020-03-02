@@ -42,7 +42,7 @@
                 <select class="form-control" required="" name="roles">
                   <option value="">Select Role</option>
                   @foreach($role as $r)
-                  <option value="{{$r->id}}" <?php if($User->roles->first()->id==$r->id){ echo 'selected';}?>>{{$r->name}}</option>
+                  <option value="{{$r->id}}" <?php if($User->roles->first()->id==$r->id){ echo 'selected';}?>>{{$r->display_name}}</option>
                   @endforeach
                 </select>
           </div>
