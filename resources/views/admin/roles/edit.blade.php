@@ -29,7 +29,7 @@
 
           <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                <input type="text" value="{{ $Role->name }}" name="name" class="form-control" placeholder="Enter Role" required="" readonly>
+                <input type="text" value="{{ $Role->display_name }}" name="name" class="form-control" placeholder="Enter Role" required="">
           </div>
 <!-- 
           <div class="form-group">

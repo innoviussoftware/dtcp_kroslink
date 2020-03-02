@@ -86,7 +86,7 @@ class RoleController extends Controller
       	$Role=Role::find($id);
     	if($Role)
     	{
-        	$Role->name = request('name');
+        	//$Role->name = request('name');
         	$Role->display_name = request('name');
           	$Role->save();
           	
@@ -130,7 +130,7 @@ class RoleController extends Controller
 
                 $sub[] = $id;
 
-                $sub[] = ucfirst($m->name);
+                $sub[] = ucfirst($m->display_name);
                
                 $encryptid = Crypt::encryptString($id);
                                 

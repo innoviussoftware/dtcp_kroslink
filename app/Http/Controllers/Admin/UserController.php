@@ -124,7 +124,7 @@ class UserController extends Controller
 
                 $sub[] = $m->email;
 
-				$sub[] = isset($m->roles->first()->name)?$m->roles->first()->name:'';
+				$sub[] = isset($m->roles->first()->display_name)?$m->roles->first()->display_name:'';
 
 //                $sub[] = $m->name;
 
