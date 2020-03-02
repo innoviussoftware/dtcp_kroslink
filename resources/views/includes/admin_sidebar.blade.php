@@ -41,16 +41,8 @@
         </ul>
 
       </li> -->
-
-
-
+      @role('deptadmin')
       
-
-      
-
-    
-      @role('editor')
-      @permission(['role-view','role-add','role-edit','role-delete'])
           <li class=" treeview">
 
             <a href="{{ route('admin.dashboard') }}">
@@ -74,13 +66,18 @@
             </ul>
 
           </li>
-      @endpermission
+      
        @endrole
 
-      @role('admin')
 
       
-      <li class=" treeview">
+
+      
+
+    
+      <!-- @role('editor')
+      @permission(['role-view','role-add','role-edit','role-delete'])
+          <li class=" treeview">
 
             <a href="{{ route('admin.dashboard') }}">
 
@@ -96,13 +93,40 @@
 
             <ul class="treeview-menu">
 
-                <!-- <li><a href="{{ route('admin.roles.addroles') }}"><i class="fa fa-circle-o"></i> Add Roles</a></li> -->
-
               <li><a href="{{ route('admin.roles') }}"><i class="fa fa-circle-o"></i> Roles List</a></li>
 
             </ul>
 
           </li>
+      @endpermission
+       @endrole -->
+
+      @role('admin')
+
+      
+   <!--    <li class=" treeview">
+
+            <a href="{{ route('admin.dashboard') }}">
+
+              <i class="fa fa-bars"></i> <span>Roles</span>
+
+              <span class="pull-right-container">
+
+                <i class="fa fa-angle-left pull-right"></i>
+
+              </span>
+
+            </a>
+
+            <ul class="treeview-menu">
+
+
+              <li><a href="{{ route('admin.roles') }}"><i class="fa fa-circle-o"></i> Roles List</a></li>
+
+            </ul>
+
+      </li> -->
+
           <li class=" treeview">
 
         <a href="{{ route('admin.dashboard') }}">

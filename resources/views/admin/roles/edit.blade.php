@@ -71,7 +71,7 @@
               </div>
           </div>
 
-          <div class="custom-control custom-checkbox list-group ">
+          <!-- <div class="custom-control custom-checkbox list-group ">
               <div class="row">
                     <div class="col-md-3">
                         <label>Role</label>
@@ -93,7 +93,7 @@
                     </div>
                     
                 </div>
-          </div>
+          </div> -->
 
           <div class="custom-control custom-checkbox list-group ">
               <div class="row">

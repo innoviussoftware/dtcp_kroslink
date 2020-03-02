@@ -19,12 +19,22 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/reset_password', 'Admin\DashboardController@reset_password')->name('reset_password');
+Route::post('/passwordsubmit', 'Admin\DashboardController@resetpasswordsubmit')->name('passwordsubmit');
+
 
 Route::name('admin.')->prefix('admin')->middleware(['auth'])->group(function () {
 	Route::get('/', function(){
     	return redirect('admin/pages');
   	})->middleware(['role:admin|editor|deptadmin']);
   	Route::get('/dashboard', 'Admin\DashboardController@index')->middleware(['role:admin|editor|deptadmin'])->name('dashboard');
+
+    //Change Password
+    Route::get('/changepassword', 'Admin\DashboardController@changepassword')->middleware(['role:admin|editor|deptadmin'])->name('changepassword');
+    Route::post('/changepassword/store', 'Admin\DashboardController@resetpassword')->middleware(['role:admin|editor|deptadmin'])->name('resetpassword');
+
+    //Reset Password
+    
 
   	//Pages
   	Route::get('/pages', 'Admin\PagesController@index')->middleware(['role:admin|editor|deptadmin'])->name('pages');

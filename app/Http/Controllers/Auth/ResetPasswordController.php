@@ -36,4 +36,11 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+
+    public function sendemail()
+    {
+        dd('here');
+        $user = User::where('email', request()->input('email'))->first();
+    }
 }

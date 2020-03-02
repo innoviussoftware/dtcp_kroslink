@@ -123,9 +123,9 @@
 
             <li class="user-footer">
 
-             <!--  <div class="pull-left">
+              <!-- <div class="pull-left">
 
-                <a href="#" class="btn btn-default btn-flat">{{$roles->name}}</a>
+                <a href="{{ route('admin.changepassword') }}" class="btn btn-default btn-flat">Change Password</a>
 
               </div> -->
 

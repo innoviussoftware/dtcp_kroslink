@@ -124,7 +124,10 @@ class UserController extends Controller
 
                 $sub[] = $m->email;
 
-				$sub[] = isset($m->roles->first()->name)?$m->roles->first()->name:'';                
+				$sub[] = isset($m->roles->first()->name)?$m->roles->first()->name:'';
+
+//                $sub[] = $m->name;
+
                 $encryptid = Crypt::encryptString($id);
                 
                 $delete_url = route('admin.users.delete', ["id" => $encryptid]);
