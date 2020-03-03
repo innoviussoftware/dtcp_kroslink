@@ -133,7 +133,8 @@
         <div class="row">
             <div class="inner-banner-image">
                 <?php
-                        if($pages->bannerimage === null){?>
+
+                        if($pages->bannerimage != null){?>
                             <img src="{{ env('APP_URL_STORAGE').$pages->bannerimage}}"/>
                         <?php }else{?>
                         <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>

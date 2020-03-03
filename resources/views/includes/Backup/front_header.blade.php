@@ -40,26 +40,21 @@
 
                                         <div class="language dropdown-icon">
 
-                                         @if(Session::get('newlang'))
-                                            <a href="#lan-list" data-toggle="collapse" ><span>தமிழ்</span></a>
+                                          @if(Session::get('newlang'))
+                                            <a href="#lan-list" data-toggle="collapse" ><span>English</span></a>
                                             @else
-                                              <a href="#" class="language-select" data-lang="tr"><span>தமிழ்</span></a>
+                                              <a href="#" class="language-select" data-lang="en"><span>English</span></a>
                                             @endif
 
                                      </div>
 
                                      <ul class="dropdown-lan collapse" id="lan-list">
-
-                                       <li>
-
-                                            <a href="#" class="language-select" data-lang="en"><span>English</span></a>
+                                        <li>
+								<a href="#" class="language-select" data-lang="tr"><span>தமிழ்</span></a>
                                             
                                         </li>
 
                                         
-
-                                       
-
                                     </ul>
 
                                 </li>
@@ -96,13 +91,12 @@
 
                                 <div class="fontreader">
 
-                                     <ul class="list-inline">
-
-                                        <li class="list-inline-item increasefont" data-path="fontincrease" id='16'><a href="#"  title="font Max" >A+</a></li>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item decreasefont"  data-path="fontdecrease" id='14'><a href="#" title="font Min">A-</a></li>
 
                                         <li class="list-inline-item regularfont" data-path="fontregular" id='15'><a  href="#" title="font Regular" >A</a></li>
 
-                                        <li class="list-inline-item decreasefont"  data-path="fontdecrease" id='14'><a href="#" title="font Min">A-</a></li>
+                                        <li class="list-inline-item increasefont" data-path="fontincrease" id='16'><a href="#"  title="font Max" >A+</a></li>
 
                                     </ul>
                                 </div>
@@ -150,7 +144,7 @@
                 <li>
                                             @if(isset($menu['is_submenu'])==1)
 
-                                            <a href="#">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                            <a href="#">{{$menu['name']}}</a>
                                                     <ul>
                                                         <li>
                                                             @foreach($menu['submenu'] as $menus)
@@ -159,14 +153,14 @@
                                                                 <?php if($menus['pages'] != null){
                                                                     if($menus['pages']['external_url']!=null){?>
 
-                                                                    <li><a href="{{$menus['pages']['external_url']}}" target="_blank" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{$menus['pages']['external_url']}}" target="_blank" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                     <?php }else{?>
-                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                     <?php }}else{?>
 
-                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                 <?php }?>                
                                                                 
@@ -177,15 +171,15 @@
                                             @else
                                             <?php if($menu['pages'] != null){
                                                 if($menu['pages']['external_url']!=null){?>
-                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{$menu['name']}}</a>
 
                                                 <?php }else{?>
 
-                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{$menu['name']}}</a>
 
                                                 <?php }}else{?>
 
-                                                <a href="{{route('homeindex','home')}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>    
+                                                <a href="{{route('homeindex','home')}}" >{{$menu['name']}}</a>    
                                                 <?php }?>  
 
                                             @endif
@@ -301,11 +295,11 @@
                                 <nav>
                                     <ul>
                                         @foreach($data['menulist'] as $key=>$menu)
-                                        @if($key>6)
+                                        @if($key>7)
                                         <li>
                                             @if(isset($menu['is_submenu'])==1)
 
-                                            <a href="#" id="parent">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                            <a href="#" id="parent">{{$menu['name']}}</a>
                                                     <ul class="megamenu first-mega">
                                                         <li>
                                                             @foreach($menu['submenu'] as $menus)
@@ -316,15 +310,15 @@
 
                                                             if($menus['pages']['external_url']!=null){?>
 
-                                                                <li><a href="$menus['pages']['external_url']" data-custom-value="$menus['pages']['id']" target="_blank">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                <li><a href="$menus['pages']['external_url']" data-custom-value="$menus['pages']['id']" target="_blank">{{$menus['name']}}</a></li>
 
                                                             <?php }else{?>
 
-                                                                <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                             <?php }}else{?>
 
-                                                                <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
                                                             <?php }?>                
                                                                 
                                                             </ul>
@@ -336,15 +330,15 @@
 
                                                 if($menu['pages']['external_url']!=null){?>
 
-                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{$menu['name']}}</a>
 
                                                 <?php }else{?>
 
-                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{$menu['name']}}</a>
 
                                                 <?php }}else{?>
 
-                                                <a href="{{route('homeindex','home')}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{route('homeindex','home')}}" >{{$menu['name']}}</a>
 
                                             <?php }?>  
                                             @endif
@@ -354,7 +348,7 @@
                                         <li>
                                             @if(isset($menu['is_submenu'])==1)
 
-                                            <a href="#" id="parent">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                            <a href="#" id="parent">{{$menu['name']}}</a>
                                                     <ul class="megamenu first-mega">
                                                         <li>
                                                             @foreach($menu['submenu'] as $menus)
@@ -363,14 +357,14 @@
                                                                 <?php if($menus['pages'] != null){
                                                                     if($menus['pages']['external_url']!=null){?>
 
-                                                                    <li><a href="{{$menus['pages']['external_url']}}"  data-custom-value="$menus['pages']['id']" target="_blank">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{$menus['pages']['external_url']}}"  data-custom-value="$menus['pages']['id']" target="_blank">{{$menus['name']}}</a></li>
 
                                                                     <?php }else{?>
-                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                     <?php }}else{?>
 
-                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                 <?php }?>                
                                                                 
@@ -381,15 +375,15 @@
                                             @else
                                             <?php if($menu['pages'] != null){
                                                 if($menu['pages']['external_url']!=null){?>
-                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{$menu['pages']['external_url']}}" target="_blank">{{$menu['name']}}</a>
 
                                                 <?php }else{?>
 
-                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{$menu['name']}}</a>
 
                                                 <?php }}else{?>
 
-                                                <a href="{{route('homeindex','home')}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>    
+                                                <a href="{{route('homeindex','home')}}" >{{$menu['name']}}</a>    
                                                 <?php }?>  
 
                                             @endif
@@ -416,21 +410,21 @@
                                         @if($key>7)
                                          <li class="child">
                                             @if(isset($menu['is_submenu'])==1)
-                                            <a href="#" id="parent">{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                            <a href="#" id="parent">{{$menu['name']}}</a>
                                                     <ul>
                                                         <li>
                                                             @foreach($menu['submenu'] as $menus)
                                                             <ul class="parent">
                                                                 <?php if($menus['pages'] != null){
                                                                     if($menus['pages']['external_url']!=null){?>
-                                                                    <li><a href="{{$menus['pages']['external_url']}}" data-custom-value="$menus['pages']['id']" target="_blank">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{$menus['pages']['external_url']}}" data-custom-value="$menus['pages']['id']" target="_blank">{{$menus['name']}}</a></li>
 
                                                                     <?php }else{?>
 
-                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex',$menus['pages']['alias'])}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
 
                                                                     <?php }}else{?>
-                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{($menus['tamil_name'])?$menus['tamil_name']:$menus['name']}}</a></li>
+                                                                    <li><a href="{{route('homeindex','home')}}" data-custom-value="$menus['pages']['id']">{{$menus['name']}}</a></li>
                                                                 <?php }?>                
                                                                 
                                                             </ul>
@@ -440,15 +434,15 @@
                                             @else
                                             <?php if($menu['pages'] != null){
                                                 if($menu['pages']['external_url']!=null){?>
-                                                    <a href="{{$menu['pages']['external_url']}}" target="_blank" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                    <a href="{{$menu['pages']['external_url']}}" target="_blank" >{{$menu['name']}}</a>
 
                                                 <?php }else{?>
 
-                                                    <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>
+                                                    <a href="{{route('homeindex',$menu['pages']['alias'])}}" >{{$menu['name']}}</a>
 
                                                 <?php }}else{?>
 
-                                                <a href="{{route('homeindex','home')}}" >{{($menu['tamilname'])?$menu['tamilname']:$menu['name']}}</a>    
+                                                <a href="{{route('homeindex','home')}}" >{{$menu['name']}}</a>    
 
                                                 <?php }?>  
                                             @endif
@@ -538,6 +532,19 @@
 
 
 
+  // jQuery('.language-select').click(function() {
+
+  //     var theLang = jQuery(this).attr('data-lang');
+
+  //     jQuery('.goog-te-combo').val(theLang);
+
+  //     window.location = jQuery(this).attr('href');
+
+  //     location.reload();
+
+
+
+  // });
 
 </script>
 
@@ -561,7 +568,7 @@
         if(path=='fontincrease'){
             var regularfont = $('.regularfont').attr('id');
             var limit = parseInt(regularfont) + 2;
-            $("h3").css("font-size",'25px'); 
+            // $("h3").css("font-size",'25px'); 
             var iid = $(this).attr('id');
 
             if(iid <= limit){
@@ -572,10 +579,14 @@
                 $("p").css("font-size",iid+'px');  
                 $("a").css("font-size",iid+'px'); 
                 $("ul").css("font-size",iid+'px'); 
-                $("h3").css("font-size",h3font+'px'); 
-                $("h3").css("text-align",'left'); 
-                $("h3").css("color",'#000'); 
-                $("h3").css("margin",'15px 0px'); 
+                $("td span").css("font-size",iid+'px'); 
+                $("th span").css("font-size",iid+'px'); 
+                // $("h3").css("font-size",h3font+'px'); 
+                // $("h2").css("font-size",h3font+'px'); 
+                // $("h2").css("text-align",'center'); 
+                // $("h3").css("text-align",'left'); 
+                // $("h3").css("color",'#000'); 
+                // $("h3").css("margin",'15px 0px'); 
                 $("#menuactive").addClass("incmenuclass");
 
 
@@ -590,10 +601,14 @@
             $("p").css("font-size",'15px');  
             $("a").css("font-size",'15px'); 
             $("ul").css("font-size",'15px'); 
-            $("h3").css("font-size",'25px'); 
-            $("h3").css("text-align",'left'); 
-            $("h3").css("color",'#000'); 
-            $("h3").css("margin",'15px 0px'); 
+            $("td span").css("font-size",'12px'); 
+            $("th span").css("font-size",'12px'); 
+            // $("h3").css("font-size",'25px'); 
+            // $("h2").css("font-size",'30px'); 
+            // $("h2").css("text-align",'center'); 
+            // $("h3").css("text-align",'left'); 
+            // $("h3").css("color",'#000'); 
+            // $("h3").css("margin",'15px 0px'); 
             $("#menuactive").addClass("normalclass");
         }
 
@@ -601,18 +616,22 @@
             var regularfont = $('.regularfont').attr('id');
             var limit = parseInt(regularfont) - 2;
             var iid = $(this).attr('id');
-            $("h3").css("font-size",'20px'); 
+            // $("h3").css("font-size",'20px'); 
             if(iid >= limit){
                 var decr = parseInt(iid) - 1;
                 var h3font=parseInt(20) - 2;
                 $(this).attr('id',decr);
                 $("p").css("font-size",iid+'px');  
                 $("a").css("font-size",iid+'px');  
-                $("ul").css("font-size",iid+'px'); 
-                $("h3").css("font-size",h3font+'px'); 
-                $("h3").css("text-align",'left'); 
-                $("h3").css("color",'#000'); 
-                $("h3").css("margin",'15px 0px'); 
+                $("ul").css("font-size",iid+'px');
+                $("td span").css("font-size",iid+'px'); 
+                $("th span").css("font-size",iid+'px'); 
+                // $("h3").css("font-size",h3font+'px'); 
+                // $("h2").css("font-size",iid+'px'); 
+                // $("h2").css("text-align",'center'); 
+                // $("h3").css("text-align",'left'); 
+                // $("h3").css("color",'#000'); 
+                // $("h3").css("margin",'15px 0px'); 
                 $("#menuactive").addClass("decmenuclass");
             }
         }
@@ -651,6 +670,7 @@
             $( ".hamburger" ).show();
         });
     });
+
     $( ".language-select" ).click(function() {
         var lang=($(this).attr("data-lang"));
         
@@ -665,4 +685,5 @@
         }); 
     });
 
+ 
 </script>
