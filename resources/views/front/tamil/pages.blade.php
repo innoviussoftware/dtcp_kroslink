@@ -9,7 +9,7 @@
 	overflow: hidden;
 	border-radius: 5px;
 	/*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
-	counter-reset: flag; 
+	counter-reset: flag;
 	/*border: 1px solid #999;*/
 }
 
@@ -41,21 +41,21 @@
 .breadcrumb a:after {
 	content: '';
 	position: absolute;
-	top: 0; 
+	top: 0;
 	right: -18px; /*half of square's length*/
 	/*same dimension as the line-height of .breadcrumb a */
-	width: 36px; 
+	width: 36px;
 	height: 36px;
 	transform: scale(0.707) rotate(45deg);
 	z-index: 1;
 	background: #666;
 	background: linear-gradient(135deg, #666, #333);
-	/*box-shadow: 
-		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+	/*box-shadow:
+		2px -2px 0 2px rgba(0, 0, 0, 0.4),
 		3px -3px 0 2px rgba(255, 255, 255, 0.1);*/
 	box-shadow: 1px -1px 0 1px rgba(0, 0, 0, 0.4), 3px -3px 0 2px rgba(255, 255, 255, 0.1);
 	/*
-		5px - for rounded arrows and 
+		5px - for rounded arrows and
 		50px - to prevent hover glitches on the border created using shadows*/
 	border-radius: 0 5px 0 50px;
 }
@@ -91,7 +91,7 @@
 	background: white;
 	box-shadow: 0 0 0 1px #ccc;
 }
-.breadcrumb.flat a i{ 
+.breadcrumb.flat a i{
 	color: #0f7a9e;
 	font-size: 18px;
 }
@@ -112,78 +112,78 @@
 .breadcrumb.flat a.classid_1:after{
 	background: #0F79A0;
 }
-/*.flat a:hover, .flat a.active, 
+
+.left-sidebar{
+    border-right: 5px solid #0f7a9e;
+    padding-right: 15px;
+    height: 100%;
+}
+.right-sidebar marquee ul li{
+    margin-bottom: 5px;
+}
+/*.flat a:hover, .flat a.active,
 .flat a:hover:after, .flat a.active:after{
 	background: #9EEB62;
 }*/
 
 </style>
 <!-- <div class="latest-infobox-area section-p-30"> -->
-        <div class="container">
-        	<div class="row">
-	            <div class="inner-banner-image">
-	                <?php 
-	                        if($pages->bannerimage === null){?>
-	                            <img src="{{ env('APP_URL_STORAGE').$pages->bannerimage}}"/>
-	                        <?php }else{?>
-	                        <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
-	                    <?php }?>
-	            </div>
-        	</div>
-    		<div class="contaner-breadcrumb" style="background: url(assets/img/breadcrumbSlider.jpg);">
 
-
-
-            <div class="row">
-                <div class="breadcrumb flat">
-                    <a class="home" href="{{ url('/') }}"><i class="fa fa-home"></i></a>
-                    @foreach($breadcumb as $key => $bd)
-                    <?php if(count($breadcumb) == 2){
-                        $css = '';
-                    }else{
-                        $css = "style=margin-right:20px;";
-                    }
-                    ?>
-                    <a {{ $css }} href="#" class="classid_{{$key}}">{{ucfirst($bd)}}</a>
-                    @endforeach
-                </div>
+	<div class="container-fluid">
+        <div class="row">
+            <div class="inner-banner-image">
+                <?php
+                        if($pages->bannerimage === null){?>
+                            <img src="{{ env('APP_URL_STORAGE').$pages->bannerimage}}"/>
+                        <?php }else{?>
+                        <img src="{{ asset('public/front_end/newimages/ci-wss-banner.jpg') }}"/>
+                    <?php }?>
             </div>
+        </div>
+        <div class="row bgcolor-breadcrumb">
+            <div class="contaner-breadcrumb">
+	            <div class="container">
+	                <div class="breadcrumb flat">
+	                    <a class="home" href="{{ url('/') }}"><i class="fa fa-home"></i></a>
+	                    @foreach($breadcumb as $key => $bd)
+	                    <?php if(count($breadcumb) == 2){
+	                        $css = '';
+	                    }else{
+	                        $css = "style=margin-right:20px;";
+	                    }
+	                    ?>
+	                    <a {{ $css }} href="#" class="classid_{{$key}}">{{ucfirst($bd)}}</a>
+	                    @endforeach
+	                </div>
 
-        <!-- Page Header End -->
-        <!-- Start Content -->
-
+	            </div>
+            </div>
+        </div>
     </div>
-        	<div class="pages_container">        		
+        <div class="container">
+        	<div class="pages_container">
 	            <div class="row">
 	                <div class="col-md-9">
-	                        <?php 
+	                	<div class="left-sidebar">
+	                        <?php
 	                        	if(isset($pages)){
 	                        		echo html_entity_decode(isset($pages->tamil_content)?$pages->tamil_content:$pages->page_content);
 	                        	}
 	                        ?>
+	                    </div>
 	                </div>
 	                <div class="col-md-3">
                     <div class="right-sidebar">
-                    <h3 class="sidebar-whatnew">What's New</h3>
-                    <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                    <h3 class="sidebar-whatnew">What's New<span><img src="{{ asset('public/front_end/newimages/12.png') }}" alt="What's New"></span></h3>
+                    <!-- <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();"> -->
                     <ul>
                         @foreach($wpnew as $wps)
 
                                     <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
 
                         @endforeach
-                       <!--  <li><a href="{{$wps->url}}" target="_blank">{{$wps->title}}</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Power delegation to subordinate office regarding Layout Approval</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/circulars/layout_approval.pdf" target="_blank">Grand of Planning Permission-Power delegation to Local Bodies</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/kodaikanal_masterplan.htm" target="_blank">Kodaikanal Modified Master Plan</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/circulars/circular_GO_21_050219.pdf" target="_blank">Circular based on the G.O No. 21 Dt. 05th February 2019</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/gos/maws_e_18_2019.pdf" target="_blank">Tamil Nadu Combined Development and Building Rules, 2019</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/gos/hud_e_21_2019.pdf" target="_blank">G.O.Ms.No. 21, Dt. 5.2.2019 of Housing and Urban Development Department</a></li>
-                        <li><a href="https://www.tn.gov.in/tcp/acts_rules/pd_e_44_1990.pdf" target="_blank">Tamil Nadu Public Buildings Licensing Rules 1965</a></li>
-                        <li><a href="http://tnbuildingreg.in/" target="_blank">Building Regularization Scheme-2017</a></li> -->
                     </ul>
-                    </marquee>
+                    <!-- </marquee> -->
                     </div>
                 </div>
 	            </div>

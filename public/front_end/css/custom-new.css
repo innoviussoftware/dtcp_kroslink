@@ -892,12 +892,16 @@ ul.gallery-category-list li{
 }
 
 
-.inner-banner-image{
+/*.inner-banner-image{
     margin: 20px 15px 0px 15px;
-}
+}*/
 .inner-banner-image img{
     max-height: 230px;
     width: 100%;
+}
+.contaner-breadcrumb {
+    /*background-color: #fac612;*/
+    padding: 20px 0 0px 0;
 }
 
 

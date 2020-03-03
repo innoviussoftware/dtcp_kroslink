@@ -349,9 +349,9 @@ a{
 }*/
 
 .contaner-breadcrumb {
-    margin-top: 20px;
-    margin-left: 25px;
-    background-image: url(assets/img/breadcrumbSlider.jpg);
+    /*margin-top: 20px;
+    margin-left: 25px;*/
+    /*background-image: url(assets/img/breadcrumbSlider.jpg);*/
 }
 .newbreadcrumb {
     padding: 0px;

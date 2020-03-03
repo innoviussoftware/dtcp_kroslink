@@ -92,12 +92,11 @@
                                 <div class="fontreader">
 
                                      <ul class="list-inline">
-
-                                        <li class="list-inline-item increasefont" data-path="fontincrease" id='16'><a href="#"  title="font Max" >A+</a></li>
+                                        <li class="list-inline-item decreasefont"  data-path="fontdecrease" id='14'><a href="#" title="font Min">A-</a></li>
 
                                         <li class="list-inline-item regularfont" data-path="fontregular" id='15'><a  href="#" title="font Regular" >A</a></li>
 
-                                        <li class="list-inline-item decreasefont"  data-path="fontdecrease" id='14'><a href="#" title="font Min">A-</a></li>
+                                        <li class="list-inline-item increasefont" data-path="fontincrease" id='16'><a href="#"  title="font Max" >A+</a></li>
 
                                     </ul>
                                 </div>
