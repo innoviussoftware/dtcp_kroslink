@@ -58,3 +58,18 @@
 .nav-tabs.gallery-category-list>li.active>a{
     background-color: #035703;
 }
+
+
+/*//breadcrum*/
+.breadcrumb.flat a i{
+    color: #035703 !important;
+}
+.breadcrumb.flat a.classid_1 {
+    background: #035703 !important;
+}
+.breadcrumb.flat a.classid_1:after{
+    background: #035703 !important;
+}
+.left-sidebar{
+    border-right: 5px solid #035703 !important;
+}
