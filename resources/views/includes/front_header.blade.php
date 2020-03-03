@@ -285,7 +285,7 @@
                                 <nav>
                                     <ul>
                                         @foreach($data['menulist'] as $key=>$menu)
-                                        @if($key>7)
+                                        @if($key>6)
                                         <li>
                                             @if(isset($menu['is_submenu'])==1)
 
