@@ -164,7 +164,7 @@
         
         <div class="pages_container">        		
 	        <div class="row">
-	            <div class="col-md-10">
+	            <div class="col-md-9">
                     <div class="left-sidebar">
                     <?php 
                     	if(isset($pages)){
@@ -173,9 +173,9 @@
                     ?>
                     </div>
 	            </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="right-sidebar">
-                    <h3 class="sidebar-whatnew">What's New</h3>
+                    <h3 class="sidebar-whatnew">What's New<span><img src="{{ asset('public/front_end/newimages/12.png') }}" alt="What's New"></span></h3>
                     <!-- <marquee direction="down" HEIGHT="100%" onmouseover="this.stop();" onmouseout="this.start();"> -->
                     <ul>
                         @foreach($wpnew as $wps)
