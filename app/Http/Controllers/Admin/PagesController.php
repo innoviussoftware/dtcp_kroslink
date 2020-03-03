@@ -189,13 +189,13 @@ class PagesController extends Controller
 
                 $sub[] = $n->title;
 
-                $sub[] = $n->meta_target;
+                //$sub[] = $n->meta_target;
 
-                $sub[] = $n->meta_keyword;
+               // $sub[] = $n->meta_keyword;
 
-                $sub[] = $n->meta_details;
+               // $sub[] = $n->meta_details;
 
-                $sub[]='<a class="btn btn-secondary" data-toggle="'.$n->url.'"  data-placement="top" title="'.$n->url.'">'.substr($n->url,0,15).'
+                $sub[]='<a href="'.$n->url.'" target="_blank" class="btn btn-secondary" data-toggle="'.$n->url.'"  data-placement="top" title="'.$n->url.'">'.$n->url.'
                     </a>';
 
                 $encryptid = Crypt::encryptString($id);

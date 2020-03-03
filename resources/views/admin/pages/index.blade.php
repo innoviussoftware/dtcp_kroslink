@@ -64,11 +64,11 @@
 
               <th>Title</th>
 
-              <th>Meta Target</th>
+              <!-- <th>Meta Target</th> -->
 
-              <th>Meta Details</th>
+<!--               <th>Meta Details</th> -->
 
-              <th>Meta Keyword</th>
+<!--               <th>Meta Keyword</th> -->
 
               <th>URL</th>
 

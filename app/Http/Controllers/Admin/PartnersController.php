@@ -43,7 +43,7 @@ class PartnersController extends Controller
         $Gallery->url = request('url');
         $Gallery->save();
 
-        return redirect()->route('admin.partners')->with("success","Partnerslogo added successfully.");
+        return redirect()->route('admin.partners')->with("success","UsefulLink added successfully.");
     }
 
     public function editpartners($id)
@@ -85,7 +85,7 @@ class PartnersController extends Controller
             // LogsDetails::StoreLogs('partners-logo', $request->all());
         }
 
-        return redirect()->route('admin.partners')->with('success','Partnerslogo updated successfully.');
+        return redirect()->route('admin.partners')->with('success','UsefulLink updated successfully.');
     }
 
     public function deletepartners($id)
@@ -97,7 +97,7 @@ class PartnersController extends Controller
           $Gallery->delete();
         }
 
-        return redirect()->route('admin.partners')->with('success','Partnerslogo deleted successfully.');
+        return redirect()->route('admin.partners')->with('success','UsefulLink deleted successfully.');
 
     }
 
@@ -184,9 +184,9 @@ class PartnersController extends Controller
         $user = Clientlogo::where('id',$encryid)->update(['activate'=>$status]);
             
         if ($status == 1) {
-                $msg = 'Logo active successfully.';
+                $msg = 'UsefulLink active successfully.';
         } elseif ($status == 0) {
-                $msg = 'Logo inactive successfully.';
+                $msg = 'UsefulLink inactive successfully.';
         }
 
         return redirect()->route('admin.partners')->with('success', $msg);
