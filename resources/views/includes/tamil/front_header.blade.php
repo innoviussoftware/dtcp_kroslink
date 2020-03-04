@@ -27,7 +27,7 @@
                               </ul>
 
                           </div>
-
+<input type="hidden" name="colorsession" value="{{Session::get('color')}}" id="colorsession">
 
 
                           <div class="language-option">
@@ -80,17 +80,17 @@
 
                                     <ul class="list-inline">
 
-                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}" data-id="white"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item blue" data-path="{{asset('public/front_end/css/blue.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item blue" data-path="{{asset('public/front_end/css/blue.css')}}" data-id="blue"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}" data-id="green"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item orange" data-path="{{asset('public/front_end/css/yellow.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item orange" data-path="{{asset('public/front_end/css/yellow.css')}}" data-id="yellow"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item purple" data-path="{{asset('public/front_end/css/purple.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item purple" data-path="{{asset('public/front_end/css/purple.css')}}" data-id="purple"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item black" data-path="{{asset('public/front_end/css/black.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item black" data-path="{{asset('public/front_end/css/black.css')}}" data-id="black"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
                                     </ul>
 
@@ -550,12 +550,25 @@
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-
+    $(document).ready(function() {
+        var color=$('#colorsession').val();
+        $('#color-switcher').attr('href', color);
+     });
     $('.languagereader ul li').on('click', function(){
 
         var path = $(this).data('path');
+        var title = $(this).data('id');
 
         $('#color-switcher').attr('href', path);
+        var url="{{route('color')}}";
+        $.ajax({
+                type: 'GET',
+                url: url,
+                data: { path:path},
+                success:function(data){
+                 //  location.reload();
+                }
+        }); 
 
     });
 
