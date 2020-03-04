@@ -988,4 +988,9 @@ ul.gallery-category-list li{
     .inner-banner-image{
         margin: 0px 0px 15px 0px;
     }
+    .latest-gallery-area .gallery .single-gallery .gallerytitle a {
+    display: block; 
+    height: 40px;
+    overflow: hidden;
+}
 }
