@@ -1,0 +1,75 @@
+.main-menu-area {
+    background: #017BFC;
+}
+.header-top {
+    background-color: #017BFC;
+}
+.latest-notice {
+    background-color: #017BFC;
+}
+.btn-primary {
+    background-color: #017BFC;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #017BFC;
+    border-color: #017BFC;
+}
+.quickform {
+    background-color: #017BFC;
+}
+.footer-bottom {
+    background: #017BFC;
+}
+.footer-middle {
+    background: #2275ce;
+}
+.theme-color{
+    color: #376037;
+}
+.carousel-title:after {
+    background: #376037;
+}
+.footerlogo img{
+    background-color: #017BFC;
+}
+.latest-gallery-area .carousel-title:after{
+    background: #017BFC;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #017BFC none repeat scroll 0 0;
+}
+.news-notice-content .auther-content{
+    color : #fff;
+}
+.main-menu-area.sticky {
+    background-color: #017BFC;
+}
+.latest-gallery-area .gallery .single-gallery {
+    background-color: #017BFC;
+    padding: 2px;
+}
+.megamenu{
+    background-color: #017BFC;
+}
+.hamburgermenu .menu{
+    background-color: #017BFC;
+}
+.nav-tabs.gallery-category-list>li.active>a{
+    background-color: #017BFC;
+}
+
+
+/*//breadcrum*/
+.breadcrumb.flat a i{
+    color: #017BFC !important;
+}
+.breadcrumb.flat a.classid_1 {
+    background: #017BFC !important;
+}
+.breadcrumb.flat a.classid_1:after{
+    background: #017BFC !important;
+}
+.left-sidebar{
+    border-right: 5px solid #017BFC !important;
+}

@@ -80,11 +80,17 @@
 
                                     <ul class="list-inline">
 
-                                        <li class="list-inline-item" class="white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item" class="red" data-path="{{asset('public/front_end/css/red.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item blue" data-path="{{asset('public/front_end/css/blue.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item" class="green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item orange" data-path="{{asset('public/front_end/css/yellow.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item purple" data-path="{{asset('public/front_end/css/purple.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item black" data-path="{{asset('public/front_end/css/black.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
                                     </ul>
 

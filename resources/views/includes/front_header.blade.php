@@ -75,11 +75,17 @@
 
                                     <ul class="list-inline">
 
-                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item white" data-path="{{asset('public/front_end/css/custom.css')}}"><a href="#lan-list-white" title="lan-list" data-title="white"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item red" data-path="{{asset('public/front_end/css/red.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item blue" data-path="{{asset('public/front_end/css/blue.css')}}"><a href="#lan-list-blue" title="lan-list" data-title="blue"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
-                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list" title="lan-list"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+                                        <li class="list-inline-item green" data-path="{{asset('public/front_end/css/green.css')}}"><a href="#lan-list-green" title="lan-list" data-title="green"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item orange" data-path="{{asset('public/front_end/css/yellow.css')}}"><a href="#lan-list-yellow" title="lan-list" data-title="yellow"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item purple" data-path="{{asset('public/front_end/css/purple.css')}}"><a href="#lan-list-purple" title="lan-list" data-title="purple"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+
+                                        <li class="list-inline-item black" data-path="{{asset('public/front_end/css/black.css')}}"><a href="#lan-list-black" title="lan-list" data-title="black"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
 
                                     </ul>
 
@@ -493,8 +499,18 @@
     $('.languagereader ul li').on('click', function(){
 
         var path = $(this).data('path');
-
+        // var title = $(this).attr('data-title').val();
+// alert(title);   
         $('#color-switcher').attr('href', path);
+        var url="{{route('color')}}";
+        $.ajax({
+                type: 'GET',
+                url: url,
+                data: { path:path},
+                success:function(data){
+                 //  location.reload();
+                }
+        }); 
 
     });
 

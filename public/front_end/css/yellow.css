@@ -1,0 +1,75 @@
+.main-menu-area {
+    background: #DF691A;
+}
+.header-top {
+    background-color: #DF691A;
+}
+.latest-notice {
+    background-color: #DF691A;
+}
+.btn-primary {
+    background-color: #DF691A;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #DF691A;
+    border-color: #DF691A;
+}
+.quickform {
+    background-color: #DF691A;
+}
+.footer-bottom {
+    background: #DF691A;
+}
+.footer-middle {
+    background: #ce7c45;
+}
+.theme-color{
+    color: #376037;
+}
+.carousel-title:after {
+    background: #376037;
+}
+.footerlogo img{
+    background-color: #DF691A;
+}
+.latest-gallery-area .carousel-title:after{
+    background: #DF691A;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #DF691A none repeat scroll 0 0;
+}
+.news-notice-content .auther-content{
+    color : #fff;
+}
+.main-menu-area.sticky {
+    background-color: #DF691A;
+}
+.latest-gallery-area .gallery .single-gallery {
+    background-color: #DF691A;
+    padding: 2px;
+}
+.megamenu{
+    background-color: #DF691A;
+}
+.hamburgermenu .menu{
+    background-color: #DF691A;
+}
+.nav-tabs.gallery-category-list>li.active>a{
+    background-color: #DF691A;
+}
+
+
+/*//breadcrum*/
+.breadcrumb.flat a i{
+    color: #DF691A !important;
+}
+.breadcrumb.flat a.classid_1 {
+    background: #DF691A !important;
+}
+.breadcrumb.flat a.classid_1:after{
+    background: #DF691A !important;
+}
+.left-sidebar{
+    border-right: 5px solid #DF691A !important;
+}

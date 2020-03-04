@@ -1,0 +1,76 @@
+.main-menu-area {
+    background: #000000;
+}
+.header-top {
+    background-color: #000000;
+}
+.latest-notice {
+    background-color: #000000;
+}
+.btn-primary {
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+.quickform {
+    background-color: #000000;
+}
+.footer-bottom {
+    background: #000000;
+}
+.footer-middle {
+    background: #2e2d2d;
+}
+.theme-color{
+    color: #376037;
+}
+.carousel-title:after {
+    background: #376037;
+}
+.footerlogo img{
+    background-color: #000000;
+}
+.latest-gallery-area .carousel-title:after{
+    background: #000000;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #000000 none repeat scroll 0 0;
+}
+.news-notice-content .auther-content{
+    color : #fff;
+}
+.main-menu-area.sticky {
+    background-color: #000000;
+}
+.latest-gallery-area .gallery .single-gallery {
+    background-color: #000000;
+    padding: 2px;
+}
+.megamenu{
+    background-color: #000000;
+}
+.hamburgermenu .menu{
+    background-color: #000000;
+}
+.nav-tabs.gallery-category-list>li.active>a{
+    background-color: #000000;
+}
+
+
+/*//breadcrum*/
+.breadcrumb.flat a i{
+    color: #000000 !important;
+}
+.breadcrumb.flat a.classid_1 {
+    background: #000000 !important;
+}
+.breadcrumb.flat a.classid_1:after{
+    background: #000000 !important;
+}
+.left-sidebar{
+    border-right: 5px solid #000000 !important;
+}

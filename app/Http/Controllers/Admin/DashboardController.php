@@ -11,6 +11,7 @@ use Auth;
 use Hash;
 use Validator;
 use Mail;
+use DB;
 class DashboardController extends Controller
 {
     //
@@ -120,6 +121,8 @@ class DashboardController extends Controller
     	$response = [];
 
             $Logs = LogDetails::all();
+
+            // $dd= DB::table('logs_details')->where('created_at', '>=', 'DATE_SUB(CURDATE(), INTERVAL 6 MONTH')->get();
 
             foreach ($Logs as $l) {
                 $sub   = [];

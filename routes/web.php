@@ -241,3 +241,4 @@ Route::get('/logout', function () {
 Route::get('/gallery/details','Front\HomeController@categorywisegallery')->name('gallerydetail');
 Route::get('/category/images/{id}','Front\HomeController@images')->name('gallerydetail');
 Route::get('/user/lang','Front\HomeController@session')->name('lang');
+Route::get('/user/color','Front\HomeController@color_session')->name('color');

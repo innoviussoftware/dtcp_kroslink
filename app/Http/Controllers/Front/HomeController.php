@@ -29,6 +29,7 @@ class HomeController extends Controller
     {
      
         $data = $request->session()->all();
+        
         $rp=$request->ip();
 
         $visit=new Visitors;
@@ -465,6 +466,15 @@ class HomeController extends Controller
       $request->session()->forget('newlang');
 // dd($data['newlang']);
        $dd=Session::put('newlang', $request->input('lang') ); 
+    }
+
+    public function color_session(Request $request)
+    {
+      $data = $request->session()->all();
+      // Session::forget($data['newlang']);
+      $request->session()->forget('color');
+// dd($data['newlang']);
+       $dd=Session::put('color', $request->input('path') ); 
     }
 
     public function defaultfhomepage()
