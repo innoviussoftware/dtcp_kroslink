@@ -19,7 +19,7 @@
 	display: block;
 	float: left;
 	font-size: 15px;
-	line-height: 36px;
+	line-height: 46px;
 	color: white;
 	padding: 0 30px 0 50px;
 	background: #666;
@@ -42,10 +42,10 @@
 	content: '';
 	position: absolute;
 	top: 0;
-	right: -18px; /*half of square's length*/
+	right: -23px; /*half of square's length*/
 	/*same dimension as the line-height of .breadcrumb a */
-	width: 36px;
-	height: 36px;
+	width: 46px;
+	height: 46px;
 	transform: scale(0.707) rotate(45deg);
 	z-index: 1;
 	background: #666;

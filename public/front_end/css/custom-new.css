@@ -1,211 +1,52 @@
 /*@font-face {
-
-
-
     font-family: "Nautilus";
-
-
-
     src: url("../fonts/Nautilus.otf");
-
-
-
     src: url("../fonts/Nautilus.otf");
-
-
-
 }*/
 
-
-
-
-
-
-
 @font-face {
-
-
-
     font-family: 'Nautilus';
-
-
-
     src: url('../fonts/NautilusPompilius.eot');
-
-
-
     src: url('../fonts/NautilusPompilius.eot?#iefix') format('embedded-opentype'),
-
-
-
         url('../fonts/NautilusPompilius.woff2') format('woff2'),
-
-
-
         url('../fonts/NautilusPompilius.woff') format('woff'),
-
-
-
         url('../fonts/NautilusPompilius.ttf') format('truetype'),
-
-
-
         url('../fonts/NautilusPompilius.svg#NautilusPompilius') format('svg');
-
-
-
     font-weight: normal;
-
-
-
     font-style: normal;
-
-
-
 }
-
-
-
-
-
-
 
 @font-face {
-
-
-
     font-family: 'lucida-handwriting';
-
-
-
     src: url('../fonts/QKMarisa.eot');
-
-
-
     src: url('../fonts/QKMarisa.eot?#iefix') format('embedded-opentype'),
-
-
-
         url('../fonts/QKMarisa.woff2') format('woff2'),
-
-
-
         url('../fonts/QKMarisa.woff') format('woff'),
-
-
-
         url('../fonts/QKMarisa.ttf') format('truetype'),
-
-
-
         url('../fonts/QKMarisa.svg#QKMarisa') format('svg');
-
-
-
     font-weight: normal;
-
-
-
     font-style: normal;
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-.main-menu nav ul li a{
-
-
-
+}.main-menu nav ul li a{
     font-family: 'Montserrat',sans-serif;
-
-
-
 }
-
-
-
 .info-box-text{
-
-
-
     font-family: 'Montserrat',sans-serif;
-
-
-
     letter-spacing: 1;
-
-
-
     text-transform: none;
-
-
-
     font-size: 16px;
-
-
-
 }
-
-
-
 .carousel-title h2{
-
-
-
     text-transform: none;
-
-
-
 }
-
-
-
 .slider-wrapper.camera_wrap{
-
-
-
     height: 370px;
-
-
-
 }
-
-
-
 /*.camera_caption-center .list p{
-
-
-
     font-family: 'tempus-sans-itc',sans-serif;
-
-
-
     font-size: 27px;
-
-
-
     letter-spacing: 1px;
-
-
-
     line-height: 28px;
-
-
-
     color: #ffffff;
-
-
-
 }*/
 
 .tblscreenheader{
@@ -235,104 +76,35 @@
 }
 
 .carousel-title h2{
-
-
-
     font-family: 'Montserrat',sans-serif;
-
-
-
     font-size: 25px;
-
-
-
     line-height: 36px;
-
-
-
     /*color: #3a3a3a;*/
-
-
-
     font-weight: 400;
-
-
-
 }
-
-
-
 .theme-color {
-
-
-
     font-size: 18px;
-
-
-
     line-height: 26px;
-
-
-
     color: #0f79a0;
-
-
-
     font-weight: 400;
-
-
-
 }
-
-
-
 .iconbtn .info-box .info-box-icon img{
-
-
-
     padding: 10px;
-
-
-
 }
-
-
-
 .owl-carousel .owl-item img{
-
-
-
     margin: 10px 0px;
 /*margin: 0px 0px 0px 0px;
     padding: 5px;
-    background-color: white;*/
-
-
-}
+    background-color: white;*/}
 
 .gallery.owl-carousel .owl-item img{
-
-
-
     /*margin: 10px 0px;*/
     margin: 0px;
     padding: 5px;
-    background-color: white;
-
-
-}
-
-
-.latest-gallery-area .carousel-title h2{
-
-
-
+    background-color: white;}.latest-gallery-area .carousel-title h2{
     font-size: 28px;
 
     padding-bottom: 0;
-
-
-
 }
 .latest-gallery-area .gallery .single-gallery{
     /*background-color: #fff;*/
@@ -374,402 +146,108 @@ ul.gallery-category-list li{
 }
 .gallery-category-list li a i{
     margin-right: 10px;
-}
-
-
-.what-new-content .content .title,.what-new-content .content .list a{
-
-
-
+}.what-new-content .content .title,.what-new-content .content .list a{
     font-family: 'Montserrat',sans-serif;
-
-
-
     color: #3a3a3a;
-
-
-
 } 
-
-
-
 .slogan .name {
-
-
-
     font-size: 32px;
-
-
-
 }
-
-
-
 .iconbtn{
-
-
-
     display: inline-block;  
-
-
-
 }
-
-
-
 .info-box-content {
-
-
-
     max-width: 160px;
-
-
-
     min-width: 150px;
-
-
-
 }
-
-
-
 .footer-payment .visiter {
-
-
-
     display: inline;
 
     font-family:'Montserrat',sans-serif;
 
     font-size: 15px;
-
-
-
 }
-
-
-
 .bg-blue{
-
-
-
     background-color : rgba(0, 191, 255, 0.93);
-
-
-
 }
-
-
-
-
-
-
 /*.lb-data .lb-caption {
-
-
-
     display: none !important;
-
-
-
 }*/
-
-
-
 .main-menu > nav > ul > li > a:hover{
-
-
-
     background-color: #ebb433;
-
-
-
 }
-
-
-
 .main-menu > nav > ul > li > a.active {
-
-
-
     background-color: #ebb433;
-
-
-
 }
-
-
-
 .mobile-menu-top nav ul li a {
-
-
-
     font-family: 'Montserrat',sans-serif;
-
-
-
 }
-
-
-
 #lightbox .lb-nav a.lb-prev,#lightbox .lb-nav a.lb-next,{
-
-
-
     opacity: 1 !important;
-
-
-
 }
-
-
-
 .latest-whatnew-area .what-new-content .list{
-
-
-
     margin-top: 4px;
-
-
-
 }
-
-
-
-
-
-
 
 /*//menu */
-
-
-
 .main-menu-area .main-menu{
-
-
-
     height: 50px;
-
-
-
     overflow: hidden;
-
-
-
     width: 90%;
-
-
-
     float: inherit;
-
-
-
     padding-left: 1em;
-
-
-
     /*padding-right: 5%;*/
-
-
-
 }
-
-
-
 .hamburgermenu .dropdown .navbar-nav>li>a{
-
-
-
     /*padding-top: 17px;
-
-
-
     padding-bottom: 17px;*/
-
-
-
     padding: 14px 20px;
-
-
-
 }
-
-
-
 .hamburgermenu .navbar-btn {
-
-
-
     margin-top: 0px;
-
-
-
     margin-bottom: 0px;
-
-
-
     padding-right: 2em;
 
 }
-
-
-
 .hamburgermenu .hamburger .btn-default {
-
-
-
     color: #FFF;
-
-
-
     background-color: #fac612;
-
-
-
     border-color: #fac612;
-
-
-
 }
-
-
-
 .hamburgermenu .menu{
-
-
-
     float: right;
-
-
-
     position: absolute;
-
-
-
     right: 0;
-
-
-
     margin-top: 50px;
-
-
-
     background-color: #0f7a9e;
-
-
-
 }
-
-
-
 .hamburgermenu .menu a{
-
-
-
     color: #fff;
-
-
-
     font-family: 'Montserrat',sans-serif;
-
-
-
     font-size: 14px;
-
-
-
 }
-
-
-
 .hamburgermenu .menu li{
-
-
-
     padding: 5px;
-
-
-
 }
-
-
-
 .hamburgermenu .menu{
-
-
-
     width: 200px;
-
-
-
     padding: 16px;
-
-
-
 }
-
-
-
 .hamburgermenu .menu ul li ul{
-
-
-
     padding: 0px 10px; 
-
-
-
     display: none;
-
-
-
 }
-
-
-
 .hamburgermenu .menu ul li:hover ul{
-
-
-
     padding: 0px 10px;
-
-
-
     display: contents;
-
-
-
 }
-
-
-
-
-
-
 
 /*foter menu*/
-
-
-
 .footer-menu ul{
-
-
-
     columns: 2;
-
-
-
     -webkit-columns: 2;
-
-
-
     -moz-columns: 2;
-
-
-
 }
-
-
-
 .breadcrumb ul li {
 
     margin-right: 0;
@@ -792,12 +270,6 @@ ul.gallery-category-list li{
 
 }
 
-
-
-
-
-
-
 /*//common page content  section cms*/
 .pages_container{
     padding-bottom: 3em !important;
@@ -816,10 +288,8 @@ ul.gallery-category-list li{
 
     color: #000;
 
-    margin: 5px 0;
-
+    margin: 5px 5px;
     font-size: 15px;
-
     line-height: 25px;
     list-style: none !important;
 
@@ -831,7 +301,7 @@ ul.gallery-category-list li{
 
     color: #000;
 
-    margin: 15px 0px;
+    margin: 0px 0px;
 
 }
 
@@ -889,23 +359,17 @@ ul.gallery-category-list li{
 
 #quickform .form-group .error{
     display: inline-block !important;
-}
-
-
-/*.inner-banner-image{
+}/*.inner-banner-image{
     margin: 20px 15px 0px 15px;
 }*/
 .inner-banner-image img{
     max-height: 230px;
     width: 100%;
 }
-.contaner-breadcrumb {
-    /*background-color: #fac612;*/
+/*.contaner-breadcrumb {
+    background-color: #fac612;
     padding: 20px 0 0px 0;
-}
-
-
-.pages_container li:before {
+}*/.pages_container li:before {
   content: "\f0a4"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
@@ -926,53 +390,20 @@ ul.gallery-category-list li{
     max-height:46px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-
-
-
     .iconbtn{
-
-
-
         width: 30%;
-
-
-
     }
-
-
-
     .footerlogo img {
-
-
-
          position: relative; 
-
-
-
          bottom: 0px; 
-
-
-
     }
-
-
-
     h3.title {
-
-
-
         width: 340px;
-
-
-
     }
 
     .breadcrumb {
         margin-top: 15px;
 }
-
-
-
 
 }
 

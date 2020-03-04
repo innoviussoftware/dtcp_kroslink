@@ -4,13 +4,14 @@
 <style type="text/css">
     .breadcrumb {
     /*centering*/
-    display: inline-block;
+    /*display: inline-block;*/
     /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);*/
     overflow: hidden;
     border-radius: 5px;
     /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
     counter-reset: flag; 
     /*border: 1px solid #999;*/
+    margin-bottom: 0px;
 }
 
 .breadcrumb a {
@@ -19,13 +20,13 @@
     display: block;
     float: left;
     font-size: 15px;
-    line-height: 36px;
+    line-height: 46px;
     color: white;
     padding: 0 30px 0 50px;
     background: #666;
     background: linear-gradient(#666, #333);
     position: relative;
-    border: 1px solid #999;
+    /*border: 1px solid #999;*/
      font-family: 'Montserrat',sans-serif;
 }
 .breadcrumb a:first-child {
@@ -42,10 +43,10 @@
     content: '';
     position: absolute;
     top: 0; 
-    right: -18px; /*half of square's length*/
+    right: -23px; /*half of square's length*/
     /*same dimension as the line-height of .breadcrumb a */
-    width: 36px; 
-    height: 36px;
+    width: 46px; 
+    height: 46px;
     transform: scale(0.707) rotate(45deg);
     z-index: 1;
     background: #666;
@@ -83,7 +84,7 @@
 
 
 .flat a, .flat a:after {
-    background: white;
+    background: #ececec;
     color: black;
     transition: all 0.5s;
 }
@@ -112,13 +113,27 @@
 .breadcrumb.flat a.classid_1:after{
     background: #0F79A0;
 }
-.left-sidebar{
+/*.left-sidebar{
     border-right: 5px solid #0f7a9e;
     padding-right: 15px;
     height: 100%;
-}
+}*/
 .right-sidebar marquee ul li{
     margin-bottom: 5px;
+}
+.bgcolor-breadcrumb{
+    background-color: #ececec;
+}
+.col-md-3 .right-sidebar{
+    border: 2px solid #0f7a9e;
+}
+h3.sidebar-whatnew{
+    background-color: #0f7a9e;
+    color: #fff;
+    padding: 15px;
+}
+.pages_container {
+    padding: 3em 0em;
 }
 /*.flat a:hover, .flat a.active, 
 .flat a:hover:after, .flat a.active:after{
